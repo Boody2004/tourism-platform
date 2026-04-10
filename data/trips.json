@@ -1,0 +1,542 @@
+[
+  {
+    "id": "1",
+    "title": "Dubai Thrill Adventure",
+    "slug": "dubai-thrill-adventure",
+    "destination": "Dubai, UAE",
+    "type": "Adventure",
+    "groupSize": "2-15",
+    "duration": "5 Days / 4 Nights",
+    "price": 199,
+    "rating": 4.8,
+    "reviews": 128,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1200&q=80"
+    ],
+    "details": "Experience the ultimate thrill in Dubai — from skydiving over the Palm to dune bashing in the Arabian Desert. This action-packed adventure combines the city's futuristic skyline with raw desert landscapes, offering an unmatched adrenaline experience for thrill-seekers.",
+    "highlights": [
+      "Skydiving over the Palm Jumeirah",
+      "Desert dune bashing & camel riding",
+      "Burj Khalifa observation deck at sunset",
+      "Jet skiing on the Persian Gulf",
+      "Luxury desert camp under the stars"
+    ],
+    "included": [
+      "4-star hotel accommodation",
+      "Daily breakfast & 2 dinners",
+      "All adventure activity fees",
+      "Airport transfers",
+      "English-speaking guide"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Visa fees",
+      "Lunch meals"
+    ],
+    "faqs": [
+      {
+        "question": "Is this trip suitable for beginners?",
+        "answer": "Yes! Our guides are experienced with first-timers. Skydiving requires a tandem jump which means you'll be attached to an expert instructor throughout."
+      },
+      {
+        "question": "What is the minimum age for the adventures?",
+        "answer": "Most activities require participants to be at least 18 years old. Some activities allow 16+ with parental consent."
+      },
+      {
+        "question": "What should I pack?",
+        "answer": "Light, comfortable clothing, sunscreen, sunglasses, and comfortable shoes. We'll provide a full packing list upon booking."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Paris Splendid Discovery",
+    "slug": "paris-splendid-discovery",
+    "destination": "Paris, France",
+    "type": "Cultural",
+    "groupSize": "4-20",
+    "duration": "7 Days / 6 Nights",
+    "price": 994,
+    "rating": 4.9,
+    "reviews": 215,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80",
+      "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1200&q=80"
+    ],
+    "details": "Immerse yourself in the timeless romance of Paris. Stroll along the Seine, marvel at iconic landmarks, savour world-class cuisine and discover why the City of Light has captivated artists, writers, and dreamers for centuries.",
+    "highlights": [
+      "Private Eiffel Tower evening tour",
+      "Louvre Museum guided experience",
+      "Versailles Palace & Gardens day trip",
+      "Seine River dinner cruise",
+      "Montmartre art quarter walking tour"
+    ],
+    "included": [
+      "5-star boutique hotel",
+      "Daily breakfast & farewell dinner",
+      "All museum entry fees",
+      "Metro/transport card",
+      "Expert cultural guide"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Personal shopping",
+      "Optional wine tasting tours",
+      "Visa fees"
+    ],
+    "faqs": [
+      {
+        "question": "Is French language knowledge required?",
+        "answer": "Not at all. Our bilingual guides handle all interactions. Most Parisians in tourist areas speak English."
+      },
+      {
+        "question": "When is the best time to visit Paris?",
+        "answer": "April–June and September–October offer ideal weather and fewer crowds. Summer is vibrant but busier."
+      },
+      {
+        "question": "Are solo travelers welcome?",
+        "answer": "Absolutely! We have a small single supplement fee and our group sizes ensure you'll meet fellow travelers easily."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Bali Sacred Serenity",
+    "slug": "bali-sacred-serenity",
+    "destination": "Bali, Indonesia",
+    "type": "Wellness",
+    "groupSize": "2-12",
+    "duration": "8 Days / 7 Nights",
+    "price": 850,
+    "rating": 4.9,
+    "reviews": 178,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
+      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&q=80"
+    ],
+    "details": "Discover your inner peace on this transformative Bali journey. From sunrise yoga in Ubud's rice terraces to purification rituals in ancient water temples, this wellness retreat will restore your mind, body, and spirit in one of Asia's most spiritual destinations.",
+    "highlights": [
+      "Daily sunrise yoga in Tegalalang Rice Terrace",
+      "Tirta Empul water purification ritual",
+      "Traditional Balinese spa & healing massage",
+      "Mount Batur volcano sunrise trek",
+      "Cooking class with local family"
+    ],
+    "included": [
+      "Luxury eco-resort accommodation",
+      "All meals (organic local cuisine)",
+      "Daily yoga & meditation sessions",
+      "Spa treatments (3 sessions)",
+      "All temple entrance fees & ceremony costs"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Visa on arrival fee",
+      "Personal purchases",
+      "Optional surf lessons"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need yoga experience?",
+        "answer": "No experience necessary. Our certified instructors accommodate all levels from beginners to advanced practitioners."
+      },
+      {
+        "question": "What is the dress code for temples?",
+        "answer": "Sarongs are required at all temples. We provide them as part of your welcome kit."
+      },
+      {
+        "question": "Is the Mount Batur trek difficult?",
+        "answer": "It is moderately challenging — a 2-hour hike starting at 2 AM. Basic fitness is sufficient. Guides assist throughout."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Tokyo Modern & Ancient",
+    "slug": "tokyo-modern-ancient",
+    "destination": "Tokyo, Japan",
+    "type": "Cultural",
+    "groupSize": "4-16",
+    "duration": "9 Days / 8 Nights",
+    "price": 1299,
+    "rating": 4.8,
+    "reviews": 203,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80",
+      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80",
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&q=80"
+    ],
+    "details": "Experience the extraordinary duality of Tokyo — where ancient temples stand beside neon-lit skyscrapers, and centuries-old tea ceremonies coexist with futuristic robot restaurants. A journey through Japan's capital is unlike anywhere else on Earth.",
+    "highlights": [
+      "Tsukiji Fish Market & sushi breakfast",
+      "Senso-ji Temple & Nakamise shopping",
+      "TeamLab digital art museum",
+      "Mount Fuji & Hakone day trip",
+      "Ninja experience & samurai museum"
+    ],
+    "included": [
+      "4-star hotel in Shinjuku",
+      "Breakfast daily & 3 special dinners",
+      "Japan Rail Pass (7 days)",
+      "IC transport card",
+      "Expert local guide"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Visa fees if applicable",
+      "Shopping & souvenirs",
+      "Optional sake tasting"
+    ],
+    "faqs": [
+      {
+        "question": "Is Japan suitable for first-time Asia visitors?",
+        "answer": "Japan is actually one of the easiest Asian destinations — incredibly safe, clean, efficient, and with excellent English signage in major cities."
+      },
+      {
+        "question": "What currency is used?",
+        "answer": "Japanese Yen (JPY). Japan is still largely cash-based, especially outside Tokyo. We recommend bringing cash."
+      },
+      {
+        "question": "Is the food suitable for vegetarians?",
+        "answer": "We accommodate dietary requirements with advance notice. Japan has excellent vegetarian options especially in Buddhist temple cuisine."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Maldives Ocean Escape",
+    "slug": "maldives-ocean-escape",
+    "destination": "Maldives",
+    "type": "Luxury",
+    "groupSize": "2-8",
+    "duration": "6 Days / 5 Nights",
+    "price": 2199,
+    "rating": 5.0,
+    "reviews": 89,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200&q=80",
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80"
+    ],
+    "details": "Step into paradise with this ultra-luxury Maldives escape. Overwater bungalows, crystal-clear lagoons, vibrant coral reefs, and world-class service combine for the most indulgent ocean experience on the planet. This is where honeymoons are made.",
+    "highlights": [
+      "Overwater bungalow with glass floor",
+      "Private sunrise snorkeling with manta rays",
+      "Underwater restaurant dining experience",
+      "Sunset dolphin watching cruise",
+      "Couples spa with ocean view"
+    ],
+    "included": [
+      "Luxury overwater villa (5 nights)",
+      "All-inclusive meals & beverages",
+      "Seaplane transfer from Malé",
+      "Non-motorized water sports",
+      "Dedicated butler service"
+    ],
+    "excluded": [
+      "International flights to Malé",
+      "Travel insurance",
+      "Motorized water sports",
+      "Spa treatments (beyond welcome session)",
+      "Excursions to local islands"
+    ],
+    "faqs": [
+      {
+        "question": "Is this suitable for non-swimmers?",
+        "answer": "Yes! Life jackets are available for all water activities and our resort has shallow lagoon areas safe for non-swimmers."
+      },
+      {
+        "question": "What is the best time to visit?",
+        "answer": "November to April offers the driest weather and best visibility for snorkeling and diving."
+      },
+      {
+        "question": "Is the Maldives good for families?",
+        "answer": "While designed for couples, we offer family-friendly room configurations. Please mention family composition when booking."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "France, Switzerland & Italy Alpine Grand Tour",
+    "slug": "france-switzerland-italy-alpine",
+    "destination": "Europe",
+    "type": "Adventure",
+    "groupSize": "6-24",
+    "duration": "14 Days / 13 Nights",
+    "price": 2800,
+    "rating": 4.7,
+    "reviews": 156,
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80"
+    ],
+    "details": "The ultimate European adventure crossing three iconic countries. From the sun-drenched Côte d'Azur to Switzerland's majestic Alps and Italy's romantic lakeside villages — this grand tour showcases Europe at its most breathtaking.",
+    "highlights": [
+      "French Riviera coastal drive & Nice Old Town",
+      "Jungfrau top of Europe cable car",
+      "Interlaken paragliding over alpine lakes",
+      "Lake Como & Bellagio village",
+      "Milan fashion & cathedral tour"
+    ],
+    "included": [
+      "4-star hotels throughout",
+      "Daily breakfast & 5 dinners",
+      "Private luxury coach",
+      "All cable car & funicular fees",
+      "Multi-lingual guide"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Schengen visa fees",
+      "Personal spending",
+      "Optional hot air balloon"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need separate visas for each country?",
+        "answer": "No — France, Switzerland, and Italy are all part of the Schengen Area. One Schengen visa covers all three."
+      },
+      {
+        "question": "What is the physical difficulty level?",
+        "answer": "Moderate. Some Alpine activities require light hiking. Most sightseeing is accessible to all fitness levels."
+      },
+      {
+        "question": "How many people are typically in a group?",
+        "answer": "Groups range from 6–24 people. Private group tours can be arranged for families or corporate bookings."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Costa Rica Rainforest Safari",
+    "slug": "costa-rica-rainforest-safari",
+    "destination": "Costa Rica",
+    "type": "Adventure",
+    "groupSize": "4-14",
+    "duration": "10 Days / 9 Nights",
+    "price": 1650,
+    "rating": 4.8,
+    "reviews": 94,
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
+      "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=1200&q=80"
+    ],
+    "details": "Plunge into one of Earth's most biodiverse ecosystems. Costa Rica's lush rainforests, active volcanoes, and Pacific beaches create the perfect backdrop for wildlife encounters, zip-lining through cloud forests, and surfing world-class waves.",
+    "highlights": [
+      "Arenal Volcano night hike & hot springs",
+      "Monteverde Cloud Forest zip-line",
+      "Tortuguero National Park boat safari",
+      "White-water rafting on Pacuare River",
+      "Surfing lessons at Manuel Antonio"
+    ],
+    "included": [
+      "Eco-lodge & boutique hotel accommodation",
+      "All meals during jungle stays",
+      "National park entry fees",
+      "All activity fees",
+      "Bilingual naturalist guide"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Personal equipment",
+      "Optional horseback riding",
+      "Souvenir shopping"
+    ],
+    "faqs": [
+      {
+        "question": "What wildlife might we see?",
+        "answer": "Jaguars, sloths, toucans, howler monkeys, sea turtles, poison dart frogs, and hundreds of bird species are all common sightings."
+      },
+      {
+        "question": "When is rainy season?",
+        "answer": "May–November is rainy season but doesn't spoil the experience — the jungle is lush and vibrant with fewer tourists."
+      },
+      {
+        "question": "Are children welcome?",
+        "answer": "Yes, 12+ for most activities. The nature walks and wildlife watching are perfect for older children and teens."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Santorini Sunset Luxury",
+    "slug": "santorini-sunset-luxury",
+    "destination": "Santorini, Greece",
+    "type": "Luxury",
+    "groupSize": "2-10",
+    "duration": "6 Days / 5 Nights",
+    "price": 1899,
+    "rating": 4.9,
+    "reviews": 142,
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&q=80",
+      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&q=80"
+    ],
+    "details": "The iconic white-washed cliffs of Oia, caldera views at sunset, and the world's most romantic island setting — Santorini is a bucket-list destination that exceeds every expectation. This luxury itinerary ensures you experience the island's finest side.",
+    "highlights": [
+      "Private caldera sunset sailing cruise",
+      "Oia sunset viewpoint champagne toast",
+      "Akrotiri Minoan ruins private tour",
+      "Red Beach & volcanic hot springs swim",
+      "Private wine tasting at Santo Winery"
+    ],
+    "included": [
+      "Caldera-view boutique hotel",
+      "Daily breakfast & 2 gourmet dinners",
+      "Private catamaran cruise",
+      "Airport transfers by private car",
+      "Concierge & guide services"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Schengen visa fees",
+      "Personal expenses",
+      "Additional excursions"
+    ],
+    "faqs": [
+      {
+        "question": "Is Santorini good for a honeymoon?",
+        "answer": "It is one of the world's top honeymoon destinations. We offer special honeymoon enhancements including rose petal turndown and champagne."
+      },
+      {
+        "question": "How do I get around the island?",
+        "answer": "We arrange private transfers for all included activities. ATV rentals and taxis are available for independent exploration."
+      },
+      {
+        "question": "What currency is used?",
+        "answer": "Euro (EUR). Cards are widely accepted across the island."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Morocco Desert & Medina",
+    "slug": "morocco-desert-medina",
+    "destination": "Morocco",
+    "type": "Cultural",
+    "groupSize": "4-18",
+    "duration": "8 Days / 7 Nights",
+    "price": 780,
+    "rating": 4.7,
+    "reviews": 118,
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=1200&q=80",
+      "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80"
+    ],
+    "details": "From the labyrinthine medinas of Marrakech to the golden dunes of the Sahara Desert, Morocco is a sensory feast of colors, aromas, and ancient traditions. Sleep in a desert camp, bargain in souks, and marvel at ancient kasbahs.",
+    "highlights": [
+      "Marrakech Djemaa el-Fna night market",
+      "Sahara Desert camel trek & overnight camp",
+      "Fez medina UNESCO world heritage tour",
+      "Atlas Mountains Berber village visit",
+      "Traditional hammam spa experience"
+    ],
+    "included": [
+      "Riad & desert camp accommodation",
+      "Daily breakfast & 4 dinners",
+      "Private 4WD desert transport",
+      "All entry fees",
+      "Local expert guides"
+    ],
+    "excluded": [
+      "International flights",
+      "Travel insurance",
+      "Visa fees",
+      "Souk shopping budget",
+      "Tips & gratuities"
+    ],
+    "faqs": [
+      {
+        "question": "Is Morocco safe for solo travelers?",
+        "answer": "Yes, especially on guided tours. We recommend staying with the group in medinas and using our recommended licensed guides."
+      },
+      {
+        "question": "What is the desert camp like?",
+        "answer": "Comfortable luxury Berber tents with proper beds, solar power, and private bathrooms. Not 'roughing it' — glamping in the Sahara."
+      },
+      {
+        "question": "Is haggling expected in souks?",
+        "answer": "Yes! It's part of the culture. Our guides will coach you on fair prices and negotiation etiquette."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Himachal Pradesh Highland Trek",
+    "slug": "himachal-pradesh-highland-trek",
+    "destination": "Himachal Pradesh, India",
+    "type": "Adventure",
+    "groupSize": "6-16",
+    "duration": "12 Days / 11 Nights",
+    "price": 620,
+    "rating": 4.6,
+    "reviews": 67,
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
+    ],
+    "details": "Trek through the majestic Himalayas where ancient Buddhist monasteries cling to cliffsides, yaks graze in alpine meadows, and snow-capped peaks pierce the clouds. This challenging yet deeply rewarding journey takes you through Spiti Valley and Manali.",
+    "highlights": [
+      "Spiti Valley high-altitude trek (4,500m)",
+      "Key Monastery & Dhankar Lake visit",
+      "Rohtang Pass snow experience",
+      "Manali & Solang Valley cable car",
+      "Local Tibetan family homestay"
+    ],
+    "included": [
+      "Guesthouse & homestay accommodation",
+      "All meals on trek days",
+      "Experienced mountain guide & porters",
+      "Trekking equipment (poles, gear)",
+      "All permits & fees"
+    ],
+    "excluded": [
+      "International/domestic flights",
+      "Travel insurance",
+      "Personal gear (boots, clothing)",
+      "Tips",
+      "Optional jeep safaris"
+    ],
+    "faqs": [
+      {
+        "question": "What fitness level is required?",
+        "answer": "Good cardiovascular fitness required. We recommend training with regular hiking for 2–3 months beforehand. No technical climbing experience needed."
+      },
+      {
+        "question": "Is altitude sickness a concern?",
+        "answer": "We acclimatize gradually with rest days built in. We carry oxygen and first aid. AMS medication advice provided pre-trip."
+      },
+      {
+        "question": "Best season to trek?",
+        "answer": "June–September is the trekking window. Spiti Valley roads open June and close November due to snow."
+      }
+    ]
+  }
+]
