@@ -1,68 +1,80 @@
-import tripsData from '@/data/trips.json';
-import { Trip } from './types';
+import tripsData from "@/data/trips.json";
+import destinationsData from "@/data/destinations.json";
+import tripTypesData from "@/data/trip-types.json";
+import { Trip } from "./types";
+
+export interface Destination {
+  id: string;
+  name: string;
+  slug: string;
+  country: string;
+  description: string;
+  image: string;
+}
+
+export interface TripType {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+}
 
 export const trips: Trip[] = tripsData as Trip[];
+export const destinations: Destination[] = destinationsData as Destination[];
+export const tripTypes: TripType[] = tripTypesData as TripType[];
 
-// Get all unique trip types dynamically from data
-export function getAllTripTypes(): string[] {
-  const types = new Set(trips.map(t => t.type));
-  return Array.from(types).sort();
+export function getAllDestinations(): Destination[] {
+  return destinations;
+}
+export function getDestinationBySlug(slug: string): Destination | undefined {
+  return destinations.find((d) => d.slug === slug);
+}
+export function getAllDestinationNames(): string[] {
+  return destinations.map((d) => d.name);
 }
 
-// Get all unique destinations dynamically from data
-export function getAllDestinations(): string[] {
-  const destinations = new Set(trips.map(t => t.destination));
-  return Array.from(destinations).sort();
+export function getAllTripTypes(): TripType[] {
+  return tripTypes;
+}
+export function getTripTypeBySlug(slug: string): TripType | undefined {
+  return tripTypes.find((t) => t.slug === slug);
+}
+export function getAllTripTypeNames(): string[] {
+  return tripTypes.map((t) => t.name);
 }
 
-// Get all trips
 export function getAllTrips(): Trip[] {
   return trips;
 }
-
-// Get featured trips
 export function getFeaturedTrips(): Trip[] {
-  return trips.filter(t => t.featured);
+  return trips.filter((t) => t.featured);
 }
-
-// Get trip by slug
 export function getTripBySlug(slug: string): Trip | undefined {
-  return trips.find(t => t.slug === slug);
+  return trips.find((t) => t.slug === slug);
 }
-
-// Get trips by type (case-insensitive)
-export function getTripsByType(type: string): Trip[] {
-  return trips.filter(t => t.type.toLowerCase() === type.toLowerCase());
-}
-
-// Get trips by destination (case-insensitive, partial match)
-export function getTripsByDestination(destination: string): Trip[] {
-  return trips.filter(t =>
-    t.destination.toLowerCase().includes(destination.toLowerCase()) ||
-    destination.toLowerCase().includes(t.destination.toLowerCase().split(',')[0])
+export function getTripsByDestination(slug: string): Trip[] {
+  const dest = getDestinationBySlug(slug);
+  if (!dest) return [];
+  return trips.filter(
+    (t) => t.destination.toLowerCase() === dest.name.toLowerCase(),
   );
 }
+export function getTripsByType(slug: string): Trip[] {
+  const type = getTripTypeBySlug(slug);
+  if (!type) return [];
+  return trips.filter((t) => t.type.toLowerCase() === type.name.toLowerCase());
+}
 
-// Generate static params for [type] pages — purely from JSON, never hardcoded
 export function generateTripTypeParams() {
-  return getAllTripTypes().map(type => ({
-    type: type.toLowerCase().replace(/\s+/g, '-'),
-  }));
+  return tripTypes.map((t) => ({ type: t.slug }));
 }
-
-// Generate static params for [destination] pages — purely from JSON, never hardcoded
 export function generateDestinationParams() {
-  return getAllDestinations().map(dest => ({
-    destination: dest.toLowerCase().replace(/[,\s]+/g, '-'),
-  }));
+  return destinations.map((d) => ({ destination: d.slug }));
 }
 
-// Utility: format type/destination from URL param back to readable
 export function paramToLabel(param: string): string {
-  return param.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  return param.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
-
-// cn utility
 export function cn(...classes: (string | undefined | false | null)[]): string {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Sea & Islands",
+    "slug": "sea-islands",
+    "description": "Sun, sand, and sparkling waters — island escapes and coastal retreats for the ultimate beach holiday."
+  },
+  {
+    "id": "2",
+    "name": "Private Riding",
+    "slug": "private-riding",
+    "description": "Exclusive private tours tailored entirely to you — your pace, your interests, your perfect trip."
+  },
+  {
+    "id": "3",
+    "name": "Culture & History",
+    "slug": "culture-history",
+    "description": "Step inside ancient civilizations, iconic monuments, and living traditions that have shaped our world."
+  },
+  {
+    "id": "4",
+    "name": "Leisure & Fun",
+    "slug": "leisure-fun",
+    "description": "Relaxed, enjoyable trips packed with entertainment, great food, and memorable experiences for all ages."
+  },
+  {
+    "id": "5",
+    "name": "Diving",
+    "slug": "diving",
+    "description": "Explore vibrant coral reefs, shipwrecks, and marine life in some of the world's best dive sites."
+  },
+  {
+    "id": "6",
+    "name": "Safari & Adventure",
+    "slug": "safari-adventure",
+    "description": "Wild landscapes, thrilling encounters, and off-the-beaten-path experiences for the true adventurer."
+  }
+]

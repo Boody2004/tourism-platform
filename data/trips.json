@@ -1,541 +1,541 @@
 [
   {
     "id": "1",
-    "title": "Dubai Thrill Adventure",
-    "slug": "dubai-thrill-adventure",
-    "destination": "Dubai, UAE",
-    "type": "Adventure",
-    "groupSize": "2-15",
+    "title": "Hurghada Red Sea Diving Adventure",
+    "slug": "hurghada-red-sea-diving",
+    "destination": "Hurghada",
+    "type": "Diving",
+    "groupSize": "2-12",
     "duration": "5 Days / 4 Nights",
-    "price": 199,
-    "rating": 4.8,
-    "reviews": 128,
+    "price": 499,
+    "rating": 4.9,
+    "reviews": 143,
     "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
-      "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1200&q=80"
+      "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200&q=80"
     ],
-    "details": "Experience the ultimate thrill in Dubai — from skydiving over the Palm to dune bashing in the Arabian Desert. This action-packed adventure combines the city's futuristic skyline with raw desert landscapes, offering an unmatched adrenaline experience for thrill-seekers.",
+    "details": "Discover the breathtaking underwater world of the Red Sea. Hurghada is home to some of the world's most vibrant coral reefs, diverse marine life, and crystal-clear warm waters — making it a bucket-list destination for divers of all levels.",
     "highlights": [
-      "Skydiving over the Palm Jumeirah",
-      "Desert dune bashing & camel riding",
-      "Burj Khalifa observation deck at sunset",
-      "Jet skiing on the Persian Gulf",
-      "Luxury desert camp under the stars"
+      "Daily boat dives to top Red Sea dive sites",
+      "Night diving experience at Giftun Island",
+      "Encounter with dolphins, reef sharks & sea turtles",
+      "PADI dive briefings with certified instructors",
+      "Snorkeling trip for non-divers"
     ],
     "included": [
       "4-star hotel accommodation",
-      "Daily breakfast & 2 dinners",
-      "All adventure activity fees",
-      "Airport transfers",
-      "English-speaking guide"
+      "Daily breakfast & dinner",
+      "All diving equipment",
+      "4 boat dive trips (2 dives each)",
+      "Airport transfers"
     ],
     "excluded": [
       "International flights",
       "Travel insurance",
+      "PADI certification (available at extra cost)",
       "Personal expenses",
-      "Visa fees",
-      "Lunch meals"
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Is this trip suitable for beginners?",
-        "answer": "Yes! Our guides are experienced with first-timers. Skydiving requires a tandem jump which means you'll be attached to an expert instructor throughout."
+        "question": "Do I need prior diving experience?",
+        "answer": "No! We offer Discover Scuba Diving for beginners. Certified divers can join our advanced reef dives. All levels are welcome."
       },
       {
-        "question": "What is the minimum age for the adventures?",
-        "answer": "Most activities require participants to be at least 18 years old. Some activities allow 16+ with parental consent."
+        "question": "How warm is the water?",
+        "answer": "The Red Sea stays between 22–28°C year-round, making it comfortable without a thick wetsuit in most seasons."
       },
       {
-        "question": "What should I pack?",
-        "answer": "Light, comfortable clothing, sunscreen, sunglasses, and comfortable shoes. We'll provide a full packing list upon booking."
+        "question": "Is the Red Sea safe for diving?",
+        "answer": "Absolutely. The Red Sea is considered one of the safest and most beginner-friendly dive destinations in the world."
       }
     ]
   },
   {
     "id": "2",
-    "title": "Paris Splendid Discovery",
-    "slug": "paris-splendid-discovery",
-    "destination": "Paris, France",
-    "type": "Cultural",
-    "groupSize": "4-20",
-    "duration": "7 Days / 6 Nights",
-    "price": 994,
-    "rating": 4.9,
-    "reviews": 215,
+    "title": "Hurghada Island Escape",
+    "slug": "hurghada-island-escape",
+    "destination": "Hurghada",
+    "type": "Sea & Islands",
+    "groupSize": "2-20",
+    "duration": "6 Days / 5 Nights",
+    "price": 399,
+    "rating": 4.8,
+    "reviews": 198,
     "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80",
-      "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1200&q=80"
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+      "https://images.unsplash.com/photo-1539650116574-75c0c9af9f54?w=800&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
     ],
-    "details": "Immerse yourself in the timeless romance of Paris. Stroll along the Seine, marvel at iconic landmarks, savour world-class cuisine and discover why the City of Light has captivated artists, writers, and dreamers for centuries.",
+    "details": "Escape to the paradise islands off Hurghada's coast. White sandy beaches, turquoise lagoons, and the warm Red Sea sun make this the perfect beach holiday.",
     "highlights": [
-      "Private Eiffel Tower evening tour",
-      "Louvre Museum guided experience",
-      "Versailles Palace & Gardens day trip",
-      "Seine River dinner cruise",
-      "Montmartre art quarter walking tour"
+      "Full-day Giftun Island excursion",
+      "Glass-bottom boat tour",
+      "Parasailing & jet skiing",
+      "Sunset cruise on the Red Sea",
+      "Beachside BBQ dinner"
     ],
     "included": [
-      "5-star boutique hotel",
-      "Daily breakfast & farewell dinner",
-      "All museum entry fees",
-      "Metro/transport card",
-      "Expert cultural guide"
+      "5-star resort accommodation",
+      "All-inclusive meals & drinks",
+      "Island boat trips",
+      "Non-motorized water sports",
+      "Airport transfers"
     ],
     "excluded": [
       "International flights",
       "Travel insurance",
-      "Personal shopping",
-      "Optional wine tasting tours",
+      "Motorized water sports extras",
+      "Spa treatments",
       "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Is French language knowledge required?",
-        "answer": "Not at all. Our bilingual guides handle all interactions. Most Parisians in tourist areas speak English."
+        "question": "Is this suitable for families with children?",
+        "answer": "Yes — this is one of our most family-friendly packages. The calm lagoon waters and sandy beaches are perfect for children of all ages."
       },
       {
-        "question": "When is the best time to visit Paris?",
-        "answer": "April–June and September–October offer ideal weather and fewer crowds. Summer is vibrant but busier."
+        "question": "When is the best time to visit Hurghada?",
+        "answer": "Hurghada enjoys sunshine year-round. October to April is slightly cooler and ideal for water sports."
       },
       {
-        "question": "Are solo travelers welcome?",
-        "answer": "Absolutely! We have a small single supplement fee and our group sizes ensure you'll meet fellow travelers easily."
+        "question": "Are meals included on the island trips?",
+        "answer": "Yes, lunch is provided on all island excursions. Breakfast and dinner are included at the resort."
       }
     ]
   },
   {
     "id": "3",
-    "title": "Bali Sacred Serenity",
-    "slug": "bali-sacred-serenity",
-    "destination": "Bali, Indonesia",
-    "type": "Wellness",
-    "groupSize": "2-12",
-    "duration": "8 Days / 7 Nights",
-    "price": 850,
+    "title": "Luxor Pharaohs Private Tour",
+    "slug": "luxor-pharaohs-private-tour",
+    "destination": "Luxor",
+    "type": "Private Riding",
+    "groupSize": "1-8",
+    "duration": "4 Days / 3 Nights",
+    "price": 650,
     "rating": 4.9,
-    "reviews": 178,
+    "reviews": 87,
     "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&q=80"
+      "https://images.unsplash.com/photo-1562679299-8f7c4b76c434?w=1200&q=80",
+      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "https://images.unsplash.com/photo-1586861256632-53f31bf74bae?w=1200&q=80"
     ],
-    "details": "Discover your inner peace on this transformative Bali journey. From sunrise yoga in Ubud's rice terraces to purification rituals in ancient water temples, this wellness retreat will restore your mind, body, and spirit in one of Asia's most spiritual destinations.",
+    "details": "Experience Luxor on a fully private, customized tour. Your personal Egyptologist guide will take you through the Valley of the Kings, Karnak Temple, and Luxor Temple at your own pace, with no crowds and no compromises.",
     "highlights": [
-      "Daily sunrise yoga in Tegalalang Rice Terrace",
-      "Tirta Empul water purification ritual",
-      "Traditional Balinese spa & healing massage",
-      "Mount Batur volcano sunrise trek",
-      "Cooking class with local family"
+      "Private Valley of the Kings tour (incl. Tutankhamun's tomb)",
+      "Karnak & Luxor Temple with expert Egyptologist",
+      "Sunrise hot air balloon over the West Bank",
+      "Private felucca Nile cruise",
+      "Hatshepsut Temple & Colossi of Memnon"
     ],
     "included": [
-      "Luxury eco-resort accommodation",
-      "All meals (organic local cuisine)",
-      "Daily yoga & meditation sessions",
-      "Spa treatments (3 sessions)",
-      "All temple entrance fees & ceremony costs"
+      "Boutique hotel accommodation",
+      "Daily breakfast & 2 dinners",
+      "Private licensed Egyptologist guide",
+      "Private A/C vehicle throughout",
+      "All entry fees & tickets"
     ],
     "excluded": [
-      "International flights",
+      "International / domestic flights",
       "Travel insurance",
-      "Visa on arrival fee",
-      "Personal purchases",
-      "Optional surf lessons"
+      "Hot air balloon (optional add-on)",
+      "Personal shopping",
+      "Tips & gratuities"
     ],
     "faqs": [
       {
-        "question": "Do I need yoga experience?",
-        "answer": "No experience necessary. Our certified instructors accommodate all levels from beginners to advanced practitioners."
+        "question": "What makes this 'private'?",
+        "answer": "You get an exclusive guide, private vehicle, and fully flexible schedule. You visit sites when you want, stay as long as you like."
       },
       {
-        "question": "What is the dress code for temples?",
-        "answer": "Sarongs are required at all temples. We provide them as part of your welcome kit."
+        "question": "Is Luxor suitable in summer?",
+        "answer": "Luxor can be very hot in July–August. We recommend October–April for the most comfortable experience."
       },
       {
-        "question": "Is the Mount Batur trek difficult?",
-        "answer": "It is moderately challenging — a 2-hour hike starting at 2 AM. Basic fitness is sufficient. Guides assist throughout."
+        "question": "How many tombs can we enter?",
+        "answer": "Standard tickets cover 3 tombs. We arrange access to additional royal tombs including Tutankhamun's for an enhanced experience."
       }
     ]
   },
   {
     "id": "4",
-    "title": "Tokyo Modern & Ancient",
-    "slug": "tokyo-modern-ancient",
-    "destination": "Tokyo, Japan",
-    "type": "Cultural",
+    "title": "Luxor Culture & History Journey",
+    "slug": "luxor-culture-history-journey",
+    "destination": "Luxor",
+    "type": "Culture & History",
     "groupSize": "4-16",
-    "duration": "9 Days / 8 Nights",
-    "price": 1299,
+    "duration": "5 Days / 4 Nights",
+    "price": 520,
     "rating": 4.8,
-    "reviews": 203,
-    "featured": true,
+    "reviews": 112,
+    "featured": false,
     "images": [
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=80",
-      "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80",
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=1200&q=80"
+      "https://images.unsplash.com/photo-1586861256632-53f31bf74bae?w=1200&q=80",
+      "https://images.unsplash.com/photo-1562679299-8f7c4b76c434?w=1200&q=80",
+      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80"
     ],
-    "details": "Experience the extraordinary duality of Tokyo — where ancient temples stand beside neon-lit skyscrapers, and centuries-old tea ceremonies coexist with futuristic robot restaurants. A journey through Japan's capital is unlike anywhere else on Earth.",
+    "details": "Immerse yourself in 3,000 years of ancient Egyptian civilization. This cultural deep-dive covers Luxor's most iconic monuments with expert historians who bring the stories of pharaohs, gods, and dynasties to vivid life.",
     "highlights": [
-      "Tsukiji Fish Market & sushi breakfast",
-      "Senso-ji Temple & Nakamise shopping",
-      "TeamLab digital art museum",
-      "Mount Fuji & Hakone day trip",
-      "Ninja experience & samurai museum"
+      "Valley of the Kings & Queens",
+      "Karnak Temple sound & light show",
+      "Luxor Museum guided visit",
+      "Alabaster workshops & artisan villages",
+      "Nile dinner cruise with cultural performance"
     ],
     "included": [
-      "4-star hotel in Shinjuku",
-      "Breakfast daily & 3 special dinners",
-      "Japan Rail Pass (7 days)",
-      "IC transport card",
-      "Expert local guide"
+      "4-star hotel accommodation",
+      "Daily breakfast & 3 dinners",
+      "Licensed Egyptologist guide",
+      "All monument entry fees",
+      "Nile dinner cruise"
     ],
     "excluded": [
-      "International flights",
+      "International / domestic flights",
       "Travel insurance",
-      "Visa fees if applicable",
-      "Shopping & souvenirs",
-      "Optional sake tasting"
+      "Personal shopping",
+      "Optional hot air balloon",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Is Japan suitable for first-time Asia visitors?",
-        "answer": "Japan is actually one of the easiest Asian destinations — incredibly safe, clean, efficient, and with excellent English signage in major cities."
+        "question": "Is prior knowledge of Egyptology required?",
+        "answer": "Not at all. Our guides pitch their explanations to the group — whether you're a history enthusiast or a first-time visitor."
       },
       {
-        "question": "What currency is used?",
-        "answer": "Japanese Yen (JPY). Japan is still largely cash-based, especially outside Tokyo. We recommend bringing cash."
+        "question": "How much walking is involved?",
+        "answer": "Moderate walking over uneven terrain at sites. Comfortable closed-toe shoes are essential."
       },
       {
-        "question": "Is the food suitable for vegetarians?",
-        "answer": "We accommodate dietary requirements with advance notice. Japan has excellent vegetarian options especially in Buddhist temple cuisine."
+        "question": "Are children welcome?",
+        "answer": "Yes — Luxor is magical for children. We have family-friendly guides who make history engaging and fun for younger visitors."
       }
     ]
   },
   {
     "id": "5",
-    "title": "Maldives Ocean Escape",
-    "slug": "maldives-ocean-escape",
-    "destination": "Maldives",
-    "type": "Luxury",
-    "groupSize": "2-8",
-    "duration": "6 Days / 5 Nights",
-    "price": 2199,
-    "rating": 5.0,
-    "reviews": 89,
+    "title": "Aswan & Nubia Safari Adventure",
+    "slug": "aswan-nubia-safari-adventure",
+    "destination": "Aswan",
+    "type": "Safari & Adventure",
+    "groupSize": "4-14",
+    "duration": "5 Days / 4 Nights",
+    "price": 580,
+    "rating": 4.7,
+    "reviews": 76,
     "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200&q=80",
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80"
+      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "https://images.unsplash.com/photo-1562679299-8f7c4b76c434?w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80"
     ],
-    "details": "Step into paradise with this ultra-luxury Maldives escape. Overwater bungalows, crystal-clear lagoons, vibrant coral reefs, and world-class service combine for the most indulgent ocean experience on the planet. This is where honeymoons are made.",
+    "details": "Venture into the raw beauty of Egypt's deep south. From golden desert dunes to ancient Nubian villages along the Nile, this safari journey takes you far off the tourist trail into Egypt's most authentic landscapes.",
     "highlights": [
-      "Overwater bungalow with glass floor",
-      "Private sunrise snorkeling with manta rays",
-      "Underwater restaurant dining experience",
-      "Sunset dolphin watching cruise",
-      "Couples spa with ocean view"
+      "4WD desert safari to remote Nubian sites",
+      "Abu Simbel temples sunrise visit",
+      "Traditional Nubian village homestay experience",
+      "Felucca overnight camping trip on the Nile",
+      "Aswan High Dam & Philae Temple boat trip"
     ],
     "included": [
-      "Luxury overwater villa (5 nights)",
-      "All-inclusive meals & beverages",
-      "Seaplane transfer from Malé",
-      "Non-motorized water sports",
-      "Dedicated butler service"
+      "Guesthouse & Nubian lodge accommodation",
+      "All meals (including village cooking experience)",
+      "Private 4WD desert vehicle",
+      "Expert local Nubian guide",
+      "All entry fees"
     ],
     "excluded": [
-      "International flights to Malé",
+      "International / domestic flights",
       "Travel insurance",
-      "Motorized water sports",
-      "Spa treatments (beyond welcome session)",
-      "Excursions to local islands"
+      "Abu Simbel flight (optional upgrade)",
+      "Personal gear",
+      "Tips"
     ],
     "faqs": [
       {
-        "question": "Is this suitable for non-swimmers?",
-        "answer": "Yes! Life jackets are available for all water activities and our resort has shallow lagoon areas safe for non-swimmers."
+        "question": "How do we get to Abu Simbel?",
+        "answer": "We travel by road convoy (3.5 hours each way), departing at 4 AM for the sunrise. A flight option is available as an upgrade."
       },
       {
-        "question": "What is the best time to visit?",
-        "answer": "November to April offers the driest weather and best visibility for snorkeling and diving."
+        "question": "Is the desert camping safe?",
+        "answer": "Yes. We use established, secure camping spots along the Nile and carry emergency communication equipment."
       },
       {
-        "question": "Is the Maldives good for families?",
-        "answer": "While designed for couples, we offer family-friendly room configurations. Please mention family composition when booking."
+        "question": "What is the Nubian village experience like?",
+        "answer": "You'll stay with a local Nubian family, help cook traditional food, and experience an Egypt that most tourists never see."
       }
     ]
   },
   {
     "id": "6",
-    "title": "France, Switzerland & Italy Alpine Grand Tour",
-    "slug": "france-switzerland-italy-alpine",
-    "destination": "Europe",
-    "type": "Adventure",
-    "groupSize": "6-24",
-    "duration": "14 Days / 13 Nights",
-    "price": 2800,
-    "rating": 4.7,
-    "reviews": 156,
-    "featured": true,
+    "title": "Aswan Leisure & Nile Relaxation",
+    "slug": "aswan-leisure-nile-relaxation",
+    "destination": "Aswan",
+    "type": "Leisure & Fun",
+    "groupSize": "2-10",
+    "duration": "4 Days / 3 Nights",
+    "price": 420,
+    "rating": 4.8,
+    "reviews": 54,
+    "featured": false,
     "images": [
-      "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1200&q=80"
+      "https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=800&q=80",
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80"
     ],
-    "details": "The ultimate European adventure crossing three iconic countries. From the sun-drenched Côte d'Azur to Switzerland's majestic Alps and Italy's romantic lakeside villages — this grand tour showcases Europe at its most breathtaking.",
+    "details": "Unwind in one of Egypt's most peaceful cities. Aswan moves at a gentler pace — the Nile here is wide and calm, the people are famously warm, and the sunsets over the desert are extraordinary.",
     "highlights": [
-      "French Riviera coastal drive & Nice Old Town",
-      "Jungfrau top of Europe cable car",
-      "Interlaken paragliding over alpine lakes",
-      "Lake Como & Bellagio village",
-      "Milan fashion & cathedral tour"
+      "Sunset felucca sailing around Elephantine Island",
+      "Spice market & Nubian bazaar visit",
+      "Philae Temple illuminated evening show",
+      "Botanical Garden island visit",
+      "Traditional Nubian lunch with local family"
     ],
     "included": [
-      "4-star hotels throughout",
-      "Daily breakfast & 5 dinners",
-      "Private luxury coach",
-      "All cable car & funicular fees",
-      "Multi-lingual guide"
+      "4-star Nile-view hotel",
+      "Daily breakfast & 2 dinners",
+      "Felucca trips",
+      "Guided city & market tour",
+      "All entry fees"
     ],
     "excluded": [
-      "International flights",
+      "International / domestic flights",
       "Travel insurance",
-      "Schengen visa fees",
-      "Personal spending",
-      "Optional hot air balloon"
+      "Personal purchases in market",
+      "Spa treatments",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Do I need separate visas for each country?",
-        "answer": "No — France, Switzerland, and Italy are all part of the Schengen Area. One Schengen visa covers all three."
+        "question": "Is this trip suitable for older travelers?",
+        "answer": "It's one of our most relaxed itineraries — ideal for older travelers, couples, or anyone wanting a slow, enjoyable pace."
       },
       {
-        "question": "What is the physical difficulty level?",
-        "answer": "Moderate. Some Alpine activities require light hiking. Most sightseeing is accessible to all fitness levels."
+        "question": "What is Aswan like compared to Cairo?",
+        "answer": "Much calmer, quieter, and less crowded. Aswan has a small-town warmth and stunning natural beauty."
       },
       {
-        "question": "How many people are typically in a group?",
-        "answer": "Groups range from 6–24 people. Private group tours can be arranged for families or corporate bookings."
+        "question": "Can I extend to Luxor?",
+        "answer": "Yes — we can arrange a Nile cruise or train connection between Aswan and Luxor as an add-on."
       }
     ]
   },
   {
     "id": "7",
-    "title": "Costa Rica Rainforest Safari",
-    "slug": "costa-rica-rainforest-safari",
-    "destination": "Costa Rica",
-    "type": "Adventure",
-    "groupSize": "4-14",
-    "duration": "10 Days / 9 Nights",
-    "price": 1650,
-    "rating": 4.8,
-    "reviews": 94,
-    "featured": false,
+    "title": "Sharm El Sheikh Diving & Reef",
+    "slug": "sharm-diving-reef",
+    "destination": "Sharm El Sheikh",
+    "type": "Diving",
+    "groupSize": "2-10",
+    "duration": "6 Days / 5 Nights",
+    "price": 699,
+    "rating": 5.0,
+    "reviews": 201,
+    "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=1200&q=80"
+      "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
     ],
-    "details": "Plunge into one of Earth's most biodiverse ecosystems. Costa Rica's lush rainforests, active volcanoes, and Pacific beaches create the perfect backdrop for wildlife encounters, zip-lining through cloud forests, and surfing world-class waves.",
+    "details": "Sharm El Sheikh is home to some of the most spectacular dive sites in the world — Ras Mohammed, the SS Thistlegorm wreck, and the famous Shark & Yolanda reef.",
     "highlights": [
-      "Arenal Volcano night hike & hot springs",
-      "Monteverde Cloud Forest zip-line",
-      "Tortuguero National Park boat safari",
-      "White-water rafting on Pacuare River",
-      "Surfing lessons at Manuel Antonio"
+      "Dive the legendary SS Thistlegorm wreck",
+      "Ras Mohammed National Park dive",
+      "Shark & Yolanda reef drift dive",
+      "Blue Hole Dahab day trip",
+      "Night dive on Jackson Reef"
     ],
     "included": [
-      "Eco-lodge & boutique hotel accommodation",
-      "All meals during jungle stays",
-      "National park entry fees",
-      "All activity fees",
-      "Bilingual naturalist guide"
+      "5-star resort with pool & beach",
+      "Daily breakfast & dinner",
+      "All diving equipment",
+      "10 guided dives over 5 days",
+      "PADI dive master supervision"
     ],
     "excluded": [
       "International flights",
       "Travel insurance",
-      "Personal equipment",
-      "Optional horseback riding",
-      "Souvenir shopping"
+      "PADI courses (available at extra cost)",
+      "Personal expenses",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "What wildlife might we see?",
-        "answer": "Jaguars, sloths, toucans, howler monkeys, sea turtles, poison dart frogs, and hundreds of bird species are all common sightings."
+        "question": "What certification level is required?",
+        "answer": "Open Water certification minimum. Advanced Open Water recommended for the SS Thistlegorm and drift dives."
       },
       {
-        "question": "When is rainy season?",
-        "answer": "May–November is rainy season but doesn't spoil the experience — the jungle is lush and vibrant with fewer tourists."
+        "question": "Is the SS Thistlegorm dive suitable for beginners?",
+        "answer": "It requires Open Water certification and comfort at 30m depth. Our dive masters assess every diver individually."
       },
       {
-        "question": "Are children welcome?",
-        "answer": "Yes, 12+ for most activities. The nature walks and wildlife watching are perfect for older children and teens."
+        "question": "Can non-divers join?",
+        "answer": "Yes — the resort and beach facilities are excellent for non-divers. We can arrange snorkeling trips and spa access."
       }
     ]
   },
   {
     "id": "8",
-    "title": "Santorini Sunset Luxury",
-    "slug": "santorini-sunset-luxury",
-    "destination": "Santorini, Greece",
-    "type": "Luxury",
-    "groupSize": "2-10",
-    "duration": "6 Days / 5 Nights",
-    "price": 1899,
-    "rating": 4.9,
-    "reviews": 142,
+    "title": "Sharm El Sheikh Sea & Island Fun",
+    "slug": "sharm-sea-island-fun",
+    "destination": "Sharm El Sheikh",
+    "type": "Sea & Islands",
+    "groupSize": "2-20",
+    "duration": "7 Days / 6 Nights",
+    "price": 599,
+    "rating": 4.8,
+    "reviews": 167,
     "featured": false,
     "images": [
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&q=80",
-      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&q=80"
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
     ],
-    "details": "The iconic white-washed cliffs of Oia, caldera views at sunset, and the world's most romantic island setting — Santorini is a bucket-list destination that exceeds every expectation. This luxury itinerary ensures you experience the island's finest side.",
+    "details": "The ultimate Red Sea beach holiday in Sharm El Sheikh. Stunning coral beaches, clear warm water, island boat trips to Tiran Island, and world-class resorts combine for a truly relaxing and fun-filled week.",
     "highlights": [
-      "Private caldera sunset sailing cruise",
-      "Oia sunset viewpoint champagne toast",
-      "Akrotiri Minoan ruins private tour",
-      "Red Beach & volcanic hot springs swim",
-      "Private wine tasting at Santo Winery"
+      "Tiran Island full-day snorkeling trip",
+      "Glass-bottom boat tour over coral gardens",
+      "Parasailing, banana boat & water sports",
+      "Naama Bay evening stroll & dining",
+      "Quad biking in the Sinai desert at sunset"
     ],
     "included": [
-      "Caldera-view boutique hotel",
-      "Daily breakfast & 2 gourmet dinners",
-      "Private catamaran cruise",
-      "Airport transfers by private car",
-      "Concierge & guide services"
+      "5-star all-inclusive beach resort",
+      "All meals & beverages",
+      "Island & snorkeling boat trip",
+      "Airport transfers",
+      "Non-motorized water sports"
     ],
     "excluded": [
       "International flights",
       "Travel insurance",
-      "Schengen visa fees",
-      "Personal expenses",
-      "Additional excursions"
+      "Motorized water sports extras",
+      "Quad biking (optional add-on)",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Is Santorini good for a honeymoon?",
-        "answer": "It is one of the world's top honeymoon destinations. We offer special honeymoon enhancements including rose petal turndown and champagne."
+        "question": "Is Sharm El Sheikh good for families?",
+        "answer": "Absolutely — calm beaches, shallow water areas, and plenty of activities for all ages."
       },
       {
-        "question": "How do I get around the island?",
-        "answer": "We arrange private transfers for all included activities. ATV rentals and taxis are available for independent exploration."
+        "question": "How is the nightlife in Sharm?",
+        "answer": "Naama Bay has excellent restaurants, shisha cafés, and bars. Lively but relaxed."
       },
       {
-        "question": "What currency is used?",
-        "answer": "Euro (EUR). Cards are widely accepted across the island."
+        "question": "Is the water safe for swimming?",
+        "answer": "Yes, very calm and warm. Designated swimming areas are monitored by resort staff at all times."
       }
     ]
   },
   {
     "id": "9",
-    "title": "Morocco Desert & Medina",
-    "slug": "morocco-desert-medina",
-    "destination": "Morocco",
-    "type": "Cultural",
-    "groupSize": "4-18",
-    "duration": "8 Days / 7 Nights",
-    "price": 780,
-    "rating": 4.7,
-    "reviews": 118,
-    "featured": false,
+    "title": "Cairo Culture & History Discovery",
+    "slug": "cairo-culture-history-discovery",
+    "destination": "Cairo",
+    "type": "Culture & History",
+    "groupSize": "2-18",
+    "duration": "5 Days / 4 Nights",
+    "price": 480,
+    "rating": 4.8,
+    "reviews": 134,
+    "featured": true,
     "images": [
-      "https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=1200&q=80",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&q=80",
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80"
+      "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1562679299-8f7c4b76c434?w=1200&q=80",
+      "https://images.unsplash.com/photo-1586861256632-53f31bf74bae?w=1200&q=80"
     ],
-    "details": "From the labyrinthine medinas of Marrakech to the golden dunes of the Sahara Desert, Morocco is a sensory feast of colors, aromas, and ancient traditions. Sleep in a desert camp, bargain in souks, and marvel at ancient kasbahs.",
+    "details": "Stand at the foot of the last surviving Wonder of the Ancient World. Cairo is a city of epic contrasts — millennia-old pyramids alongside a chaotic, beautiful modern metropolis.",
     "highlights": [
-      "Marrakech Djemaa el-Fna night market",
-      "Sahara Desert camel trek & overnight camp",
-      "Fez medina UNESCO world heritage tour",
-      "Atlas Mountains Berber village visit",
-      "Traditional hammam spa experience"
+      "Pyramids of Giza & the Great Sphinx at sunrise",
+      "Egyptian Museum & Tutankhamun treasures",
+      "Islamic Cairo: Khan el-Khalili & Al-Azhar Mosque",
+      "Coptic Cairo: Hanging Church & Ben Ezra Synagogue",
+      "Sound & Light Show at the Pyramids"
     ],
     "included": [
-      "Riad & desert camp accommodation",
-      "Daily breakfast & 4 dinners",
-      "Private 4WD desert transport",
-      "All entry fees",
-      "Local expert guides"
+      "4-star hotel in central Cairo",
+      "Daily breakfast & 2 dinners",
+      "Licensed Egyptologist guide",
+      "Private A/C vehicle",
+      "All entry fees"
     ],
     "excluded": [
       "International flights",
       "Travel insurance",
-      "Visa fees",
-      "Souk shopping budget",
-      "Tips & gratuities"
+      "Camel or horse rides at Giza",
+      "Personal shopping in Khan el-Khalili",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "Is Morocco safe for solo travelers?",
-        "answer": "Yes, especially on guided tours. We recommend staying with the group in medinas and using our recommended licensed guides."
+        "question": "Can we go inside the Great Pyramid?",
+        "answer": "Yes — interior access is available at an additional cost. It involves a narrow ascending passage."
       },
       {
-        "question": "What is the desert camp like?",
-        "answer": "Comfortable luxury Berber tents with proper beds, solar power, and private bathrooms. Not 'roughing it' — glamping in the Sahara."
+        "question": "Is Cairo safe for tourists?",
+        "answer": "The main tourist areas of Cairo are very well-traveled and safe. We use only licensed vehicles and vetted guides."
       },
       {
-        "question": "Is haggling expected in souks?",
-        "answer": "Yes! It's part of the culture. Our guides will coach you on fair prices and negotiation etiquette."
+        "question": "How busy are the pyramids?",
+        "answer": "We visit at sunrise to avoid the crowds. Early morning is by far the best time."
       }
     ]
   },
   {
     "id": "10",
-    "title": "Himachal Pradesh Highland Trek",
-    "slug": "himachal-pradesh-highland-trek",
-    "destination": "Himachal Pradesh, India",
-    "type": "Adventure",
-    "groupSize": "6-16",
-    "duration": "12 Days / 11 Nights",
-    "price": 620,
+    "title": "Cairo Leisure City Break",
+    "slug": "cairo-leisure-city-break",
+    "destination": "Cairo",
+    "type": "Leisure & Fun",
+    "groupSize": "2-12",
+    "duration": "4 Days / 3 Nights",
+    "price": 350,
     "rating": 4.6,
-    "reviews": 67,
+    "reviews": 89,
     "featured": false,
     "images": [
+      "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
       "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80",
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
     ],
-    "details": "Trek through the majestic Himalayas where ancient Buddhist monasteries cling to cliffsides, yaks graze in alpine meadows, and snow-capped peaks pierce the clouds. This challenging yet deeply rewarding journey takes you through Spiti Valley and Manali.",
+    "details": "A relaxed, fun-filled city break in Cairo that mixes iconic sights with great food, shopping, and entertainment. Perfect for travelers who want to experience Egypt's capital without a packed itinerary.",
     "highlights": [
-      "Spiti Valley high-altitude trek (4,500m)",
-      "Key Monastery & Dhankar Lake visit",
-      "Rohtang Pass snow experience",
-      "Manali & Solang Valley cable car",
-      "Local Tibetan family homestay"
+      "Pyramids of Giza panoramic visit",
+      "Khan el-Khalili souk shopping & mint tea",
+      "Nile dinner cruise with entertainment",
+      "Cairo Tower & city panorama",
+      "Egyptian street food tour"
     ],
     "included": [
-      "Guesthouse & homestay accommodation",
-      "All meals on trek days",
-      "Experienced mountain guide & porters",
-      "Trekking equipment (poles, gear)",
-      "All permits & fees"
+      "4-star hotel accommodation",
+      "Daily breakfast",
+      "Nile dinner cruise",
+      "Pyramids visit with guide",
+      "Airport transfers"
     ],
     "excluded": [
-      "International/domestic flights",
+      "International flights",
       "Travel insurance",
-      "Personal gear (boots, clothing)",
-      "Tips",
-      "Optional jeep safaris"
+      "Lunches & personal meals",
+      "Shopping budget",
+      "Visa fees"
     ],
     "faqs": [
       {
-        "question": "What fitness level is required?",
-        "answer": "Good cardiovascular fitness required. We recommend training with regular hiking for 2–3 months beforehand. No technical climbing experience needed."
+        "question": "Is this a relaxed pace?",
+        "answer": "Yes — this is designed as a city break, not a rushed itinerary. You'll have free time each afternoon to explore independently."
       },
       {
-        "question": "Is altitude sickness a concern?",
-        "answer": "We acclimatize gradually with rest days built in. We carry oxygen and first aid. AMS medication advice provided pre-trip."
+        "question": "What is the best area to stay in Cairo?",
+        "answer": "We place you in Zamalek or Garden City — central, quiet, and walking distance to the Nile."
       },
       {
-        "question": "Best season to trek?",
-        "answer": "June–September is the trekking window. Spiti Valley roads open June and close November due to snow."
+        "question": "Can I extend this trip?",
+        "answer": "Easily. We can add days in Cairo, or connect this to a Luxor or Aswan extension."
       }
     ]
   }

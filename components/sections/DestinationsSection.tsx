@@ -1,16 +1,11 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
-import SectionHeader from '@/components/ui/SectionHeader';
-import { getAllTrips } from '@/lib/data';
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { getAllDestinations } from "@/lib/data";
 
 export default function DestinationsSection() {
-  const trips = getAllTrips();
-
-  // Get unique destinations with their first trip's image
-  const destinations = Array.from(
-    new Map(trips.map(t => [t.destination, t])).values()
-  ).slice(0, 4);
+  const destinations = getAllDestinations().slice(0, 4);
 
   return (
     <section className="py-20 bg-slate-50">
@@ -19,32 +14,31 @@ export default function DestinationsSection() {
           <SectionHeader
             label="Destinations"
             title="See more destinations"
-            subtitle="From tropical islands to ancient cities — your next adventure awaits."
+            subtitle="From the Red Sea coast to the ancient Nile Valley — your next adventure awaits."
           />
-          <Link href="/trips" className="btn-outline shrink-0">
+          <Link href="/destinations" className="btn-outline shrink-0">
             View all destinations <ArrowRight size={16} />
           </Link>
         </div>
-
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {destinations.map(trip => (
+          {destinations.map((dest) => (
             <Link
-              key={trip.destination}
-              href={`/destination/${trip.destination.toLowerCase().replace(/[,\s]+/g, '-')}`}
+              key={dest.slug}
+              href={`/destinations/${dest.slug}`}
               className="group relative h-56 rounded-2xl overflow-hidden shadow-sm card-hover block"
             >
               <Image
-                src={trip.images[0]}
-                alt={trip.destination}
+                src={dest.image}
+                alt={dest.name}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-display font-semibold text-lg leading-tight">{trip.destination}</p>
-                <p className="text-white/70 text-xs mt-1">
-                  {trips.filter(t => t.destination === trip.destination).length} trip{trips.filter(t => t.destination === trip.destination).length !== 1 ? 's' : ''}
+                <p className="text-white font-display font-semibold text-lg leading-tight">
+                  {dest.name}
                 </p>
+                <p className="text-white/70 text-xs mt-1">{dest.country}</p>
               </div>
             </Link>
           ))}

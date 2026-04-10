@@ -14,7 +14,6 @@ import NewsletterForm from "./NewsletterForm";
 export default function Footer() {
   return (
     <footer className="bg-dark-900 text-slate-300">
-      {/* Top CTA band */}
       <div className="bg-brand-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
@@ -31,7 +30,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center">
@@ -42,9 +40,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Your dream, fully planned. We craft unforgettable journeys that
-              balance adventure, culture, and pure relaxation across every
-              continent.
+              Your dream, fully planned. We craft unforgettable journeys across
+              Egypt's most remarkable destinations.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-slate-400">
@@ -67,49 +64,50 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin size={14} className="text-brand-400" />
-                <span>Singapore Office — 10 Orchard Road, Singapore</span>
+                <span>Ismailia, Egypt</span>
               </div>
             </div>
           </div>
 
-          {/* Pages */}
           <div>
             <h4 className="text-white font-semibold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm">
-              {["Home", "About", "All Trips", "Blog", "Contact"].map((p) => (
-                <li key={p}>
+              {[
+                { label: "Home", href: "/" },
+                { label: "About", href: "/about" },
+                { label: "All Trips", href: "/trips" },
+                { label: "Destinations", href: "/destinations" },
+                { label: "Blog", href: "/blog" },
+                { label: "Contact", href: "/contact" },
+              ].map((p) => (
+                <li key={p.href}>
                   <Link
-                    href={
-                      p === "Home"
-                        ? "/"
-                        : `/${p.toLowerCase().replace(" ", "-")}`
-                    }
+                    href={p.href}
                     className="text-slate-400 hover:text-brand-400 transition-colors"
                   >
-                    {p}
+                    {p.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Destinations */}
           <div>
             <h4 className="text-white font-semibold mb-4">Destinations</h4>
             <ul className="space-y-2 text-sm">
               {[
-                "Dubai, UAE",
-                "Paris, France",
-                "Bali, Indonesia",
-                "Tokyo, Japan",
-                "Maldives",
+                { name: "Hurghada", slug: "hurghada" },
+                { name: "Luxor", slug: "luxor" },
+                { name: "Aswan", slug: "aswan" },
+                { name: "Sharm El Sheikh", slug: "sharm-el-sheikh" },
+                { name: "Cairo", slug: "cairo" },
               ].map((d) => (
-                <li key={d}>
+                <li key={d.slug}>
                   <Link
-                    href={`/destination/${d.toLowerCase().replace(/[,\s]+/g, "-")}`}
+                    href={`/destinations/${d.slug}`}
                     className="text-slate-400 hover:text-brand-400 transition-colors"
                   >
-                    {d}
+                    {d.name}
                   </Link>
                 </li>
               ))}
@@ -124,17 +122,23 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Trip Types */}
           <div>
             <h4 className="text-white font-semibold mb-4">Trip Types</h4>
             <ul className="space-y-2 text-sm">
-              {["Adventure", "Cultural", "Luxury", "Wellness"].map((t) => (
-                <li key={t}>
+              {[
+                { name: "Sea & Islands", slug: "sea-islands" },
+                { name: "Private Riding", slug: "private-riding" },
+                { name: "Culture & History", slug: "culture-history" },
+                { name: "Leisure & Fun", slug: "leisure-fun" },
+                { name: "Diving", slug: "diving" },
+                { name: "Safari & Adventure", slug: "safari-adventure" },
+              ].map((t) => (
+                <li key={t.slug}>
                   <Link
-                    href={`/trips/${t.toLowerCase()}`}
+                    href={`/trips/${t.slug}`}
                     className="text-slate-400 hover:text-brand-400 transition-colors"
                   >
-                    {t} Tours
+                    {t.name}
                   </Link>
                 </li>
               ))}
