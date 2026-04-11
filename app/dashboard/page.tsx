@@ -124,12 +124,9 @@ export default function DashboardOverview() {
         <div className="bg-white rounded-2xl border border-slate-200 p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-dark-800">Destinations</h2>
-            <Link
-              href="/dashboard/add-trip"
-              className="flex items-center gap-1 text-xs text-brand-600 hover:text-brand-700 font-medium"
-            >
-              <PlusCircle size={13} /> Add trip
-            </Link>
+            <span className="text-xs text-slate-400">
+              From destinations.json
+            </span>
           </div>
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {destinations.map((dest) => {
