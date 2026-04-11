@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
-    label: "Trips",
+    label: "Trip Types",
     href: "/trips",
     children: [
       { label: "All Trips", href: "/trips" },

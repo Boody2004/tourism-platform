@@ -1,43 +1,50 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import {
-  Globe, LayoutDashboard, Map, Inbox, PlusCircle,
-  LogOut, Menu, X, ChevronRight
-} from 'lucide-react';
+  Globe,
+  LayoutDashboard,
+  Map,
+  Inbox,
+  PlusCircle,
+  LogOut,
+  Menu,
+  X,
+  ChevronRight,
+} from "lucide-react";
 
 const navItems = [
-  { label: 'Overview', href: '/dashboard', icon: LayoutDashboard },
-  { label: 'All Trips', href: '/dashboard/trips', icon: Map },
-  { label: 'Add Trip', href: '/dashboard/add-trip', icon: PlusCircle },
-  { label: 'Requests', href: '/dashboard/requests', icon: Inbox },
+  { label: "Overview", href: "/dashboard", icon: LayoutDashboard },
+  { label: "All Trips", href: "/dashboard/trips", icon: Map },
+  { label: "Add Trip", href: "/dashboard/add-trip", icon: PlusCircle },
+  { label: "Requests", href: "/dashboard/requests", icon: Inbox },
 ];
 
 function LoginScreen({ onLogin }: { onLogin: () => void }) {
-  const [form, setForm] = useState({ username: '', password: '' });
-  const [error, setError] = useState('');
+  const [form, setForm] = useState({ username: "", password: "" });
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
+    setError("");
     try {
-      const res = await fetch('/api/auth', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       if (res.ok) {
-        localStorage.setItem('admin_authed', '1');
+        localStorage.setItem("admin_authed", "1");
         onLogin();
       } else {
-        setError('Invalid username or password');
+        setError("Invalid username or password");
       }
     } catch {
-      setError('Connection error. Please try again.');
+      setError("Connection error. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -50,30 +57,45 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
           <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <Globe size={28} className="text-white" />
           </div>
-          <h1 className="font-display text-2xl font-bold text-white">Touriva Admin</h1>
-          <p className="text-slate-400 text-sm mt-1">Sign in to your dashboard</p>
+          <h1 className="font-display text-2xl font-bold text-white">
+            Touriva Admin
+          </h1>
+          <p className="text-slate-400 text-sm mt-1">
+            Sign in to your dashboard
+          </p>
         </div>
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-2xl space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-2xl p-8 shadow-2xl space-y-4"
+        >
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1.5">Username</label>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Username
+            </label>
             <input
               type="text"
               required
               autoComplete="username"
               value={form.username}
-              onChange={e => setForm(f => ({ ...f, username: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, username: e.target.value }))
+              }
               className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
               placeholder="admin"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Password
+            </label>
             <input
               type="password"
               required
               autoComplete="current-password"
               value={form.password}
-              onChange={e => setForm(f => ({ ...f, password: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, password: e.target.value }))
+              }
               className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
               placeholder="••••••••"
             />
@@ -84,7 +106,11 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
             disabled={loading}
             className="btn-primary w-full justify-center mt-2 disabled:opacity-60"
           >
-            {loading ? <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : 'Sign In'}
+            {loading ? (
+              <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            ) : (
+              "Sign In"
+            )}
           </button>
           <p className="text-center text-xs text-slate-400 mt-2">
             Default: admin / touriva2024
@@ -95,7 +121,11 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
   );
 }
 
-export default function DashboardShell({ children }: { children: React.ReactNode }) {
+export default function DashboardShell({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [authed, setAuthed] = useState(false);
   const [checked, setChecked] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -103,16 +133,16 @@ export default function DashboardShell({ children }: { children: React.ReactNode
   const router = useRouter();
 
   useEffect(() => {
-    const auth = localStorage.getItem('admin_authed');
-    setAuthed(auth === '1');
+    const auth = localStorage.getItem("admin_authed");
+    setAuthed(auth === "1");
     setChecked(true);
   }, []);
 
   const handleLogout = async () => {
-    await fetch('/api/auth', { method: 'DELETE' });
-    localStorage.removeItem('admin_authed');
+    await fetch("/api/auth", { method: "DELETE" });
+    localStorage.removeItem("admin_authed");
     setAuthed(false);
-    router.push('/dashboard');
+    router.push("/dashboard");
   };
 
   if (!checked) return null;
@@ -121,18 +151,24 @@ export default function DashboardShell({ children }: { children: React.ReactNode
   return (
     <div className="min-h-screen bg-slate-100 flex">
       {/* Sidebar */}
-      <aside className={`
+      <aside
+        className={`
         fixed inset-y-0 left-0 z-50 w-64 bg-dark-900 flex flex-col transition-transform duration-300
-        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
         lg:relative lg:translate-x-0
-      `}>
+      `}
+      >
         {/* Logo */}
         <div className="flex items-center gap-3 px-6 h-16 border-b border-dark-700">
           <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
             <Globe size={16} className="text-white" />
           </div>
-          <span className="font-display text-lg font-bold text-white">Touriva</span>
-          <span className="ml-auto text-xs text-slate-500 font-medium">Admin</span>
+          <span className="font-display text-lg font-bold text-white">
+            Touriva
+          </span>
+          <span className="ml-auto text-xs text-slate-500 font-medium">
+            Admin
+          </span>
         </div>
 
         {/* Nav */}
@@ -146,8 +182,8 @@ export default function DashboardShell({ children }: { children: React.ReactNode
                 onClick={() => setSidebarOpen(false)}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all group ${
                   active
-                    ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/30'
-                    : 'text-slate-400 hover:text-white hover:bg-dark-700'
+                    ? "bg-brand-600 text-white shadow-lg shadow-brand-600/30"
+                    : "text-slate-400 hover:text-white hover:bg-dark-700"
                 }`}
               >
                 <Icon size={17} />
@@ -160,7 +196,10 @@ export default function DashboardShell({ children }: { children: React.ReactNode
 
         {/* Footer */}
         <div className="px-3 py-4 border-t border-dark-700">
-          <Link href="/" className="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-white text-sm transition-colors mb-1">
+          <Link
+            href="/"
+            className="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-white text-sm transition-colors mb-1"
+          >
             <Globe size={15} /> View Website
           </Link>
           <button
@@ -174,7 +213,10 @@ export default function DashboardShell({ children }: { children: React.ReactNode
 
       {/* Overlay for mobile */}
       {sidebarOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setSidebarOpen(false)} />
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
       )}
 
       {/* Main */}
@@ -189,7 +231,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
           </button>
           <div>
             <h1 className="font-semibold text-dark-800 text-sm">
-              {navItems.find(n => n.href === pathname)?.label || 'Dashboard'}
+              {navItems.find((n) => n.href === pathname)?.label || "Dashboard"}
             </h1>
           </div>
           <div className="ml-auto flex items-center gap-3">
@@ -200,9 +242,7 @@ export default function DashboardShell({ children }: { children: React.ReactNode
         </header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-auto p-4 sm:p-6">
-          {children}
-        </main>
+        <main className="flex-1 overflow-auto p-4 sm:p-6">{children}</main>
       </div>
     </div>
   );
