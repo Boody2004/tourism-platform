@@ -114,6 +114,11 @@ function FAQField({
             />
           </div>
         ))}
+        {faqs.length === 0 && (
+          <p className="text-xs text-slate-400 italic">
+            No items yet. Click &quot;Add item&quot; to begin.
+          </p>
+        )}
       </div>
     </div>
   );
@@ -136,7 +141,7 @@ export default function AddTripClient() {
     price: "",
     details: "",
     featured: false,
-    images: ["", "", ""],
+    images: [""],
     highlights: [""],
     included: [""],
     excluded: [""],
@@ -223,21 +228,12 @@ export default function AddTripClient() {
         <p className="text-xs text-slate-500 mb-3">
           Or enter image URLs directly:
         </p>
-        {form.images.map((img, i) => (
-          <input
-            key={i}
-            type="url"
-            value={img}
-            onChange={(e) =>
-              set(
-                "images",
-                form.images.map((v, idx) => (idx === i ? e.target.value : v)),
-              )
-            }
-            placeholder={`Image URL ${i + 1}${i === 0 ? " (required)" : " (optional)"}`}
-            className={`${inputClass} mb-2`}
-          />
-        ))}
+        <ArrayField
+          label=""
+          values={form.images}
+          onChange={(v) => set("images", v)}
+          placeholder="https://images.unsplash.com/..."
+        />
       </div>
 
       {/* Basic info */}
