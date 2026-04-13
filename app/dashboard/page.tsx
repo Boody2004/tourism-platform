@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { BookingRequest } from "@/lib/types";
 import Link from "next/link";
-import { Map, Inbox, Globe, Tag, PlusCircle, ArrowRight } from "lucide-react";
+import { Map, Inbox, Globe, Tag, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = { title: "Overview" };
 
@@ -79,12 +79,12 @@ export default function DashboardOverview() {
         ))}
       </div>
 
+      {/* Trip des */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Trip Types */}
         <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <div className="flex items-center justify-between mb-4">
+          <div className="mb-4">
             <h2 className="font-semibold text-dark-800">Trip Types</h2>
-            <span className="text-xs text-slate-400">From trip-types.json</span>
           </div>
           <div className="space-y-2">
             {types.map((type) => {
@@ -115,18 +115,14 @@ export default function DashboardOverview() {
             })}
           </div>
           <p className="text-xs text-slate-400 mt-3">
-            ✨ Manage types in data/trip-types.json — routes update
-            automatically
+            Manage types in data/trip-types.json — routes update automatically
           </p>
         </div>
 
         {/* Destinations */}
         <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <div className="flex items-center justify-between mb-4">
+          <div className="mb-4">
             <h2 className="font-semibold text-dark-800">Destinations</h2>
-            <span className="text-xs text-slate-400">
-              From destinations.json
-            </span>
           </div>
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {destinations.map((dest) => {
@@ -157,7 +153,7 @@ export default function DashboardOverview() {
             })}
           </div>
           <p className="text-xs text-slate-400 mt-3">
-            ✨ Manage destinations in data/destinations.json — routes update
+            Manage destinations in data/destinations.json — routes update
             automatically
           </p>
         </div>

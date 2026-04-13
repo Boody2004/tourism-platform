@@ -50,7 +50,7 @@ function ArrayField({
           onClick={add}
           className="text-xs text-brand-600 hover:text-brand-700 font-medium flex items-center gap-1"
         >
-          <Plus size={12} /> Add
+          <Plus size={12} /> Add item
         </button>
       </div>
       <div className="space-y-2">

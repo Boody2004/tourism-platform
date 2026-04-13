@@ -5,6 +5,7 @@ import { BookingRequest } from "@/lib/types";
 import {
   Search,
   Trash2,
+  FlagTriangleRight,
   RefreshCw,
   Users,
   Calendar,
@@ -21,6 +22,7 @@ export default function RequestsClient({ initialRequests }: Props) {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<"All" | "New" | "Closed">("All");
   const [loading, setLoading] = useState<string | null>(null);
+  const [confirmDelete, setConfirmDelete] = useState<string | null>(null);
 
   const filtered = requests.filter((r) => {
     const matchSearch =
@@ -53,7 +55,6 @@ export default function RequestsClient({ initialRequests }: Props) {
   };
 
   const deleteRequest = async (id: string) => {
-    if (!confirm("Delete this request?")) return;
     setLoading(id);
     try {
       const res = await fetch("/api/requests", {
@@ -64,6 +65,7 @@ export default function RequestsClient({ initialRequests }: Props) {
       if (res.ok) setRequests((prev) => prev.filter((r) => r.id !== id));
     } finally {
       setLoading(null);
+      setConfirmDelete(null);
     }
   };
 
@@ -125,7 +127,6 @@ export default function RequestsClient({ initialRequests }: Props) {
       {/* Cards */}
       {filtered.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-2xl border border-slate-200">
-          <p className="text-4xl mb-3">📭</p>
           <p className="font-semibold text-dark-800">No requests found</p>
           <p className="text-slate-400 text-sm mt-1">
             Booking submissions from the website will appear here.
@@ -159,7 +160,7 @@ export default function RequestsClient({ initialRequests }: Props) {
                   </div>
                   {req.tripTitle && (
                     <p className="text-xs text-brand-600 font-medium mt-0.5">
-                      📍 {req.tripTitle}
+                      {req.tripTitle}
                     </p>
                   )}
                 </div>
@@ -215,13 +216,32 @@ export default function RequestsClient({ initialRequests }: Props) {
                       ? "Mark as Closed"
                       : "Reopen"}
                 </button>
-                <button
-                  onClick={() => deleteRequest(req.id)}
-                  disabled={loading === req.id}
-                  className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors disabled:opacity-60"
-                >
-                  <Trash2 size={14} />
-                </button>
+
+                {confirmDelete === req.id ? (
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() => deleteRequest(req.id)}
+                      disabled={loading === req.id}
+                      className="px-2 py-1 bg-red-500 text-white text-xs rounded-lg hover:bg-red-600 disabled:opacity-60"
+                    >
+                      {loading === req.id ? "..." : "Confirm"}
+                    </button>
+                    <button
+                      onClick={() => setConfirmDelete(null)}
+                      className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-lg hover:bg-slate-200"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => setConfirmDelete(req.id)}
+                    disabled={loading === req.id}
+                    className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors disabled:opacity-60"
+                  >
+                    <Trash2 size={14} />
+                  </button>
+                )}
               </div>
             </div>
           ))}
