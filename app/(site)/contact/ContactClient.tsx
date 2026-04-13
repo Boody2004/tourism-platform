@@ -81,14 +81,12 @@ export default function ContactClient() {
                 icon: MapPin,
                 label: "Office",
                 value: "10 Orchard Road, Singapore 238859",
-                href: "#",
                 color: "bg-brand-50 text-brand-600",
               },
               {
                 icon: Clock,
                 label: "Hours",
                 value: "Mon–Sun: 8:00 AM – 8:00 PM SGT",
-                href: "#",
                 color: "bg-brand-50 text-brand-600",
               },
             ].map(({ icon: Icon, label, value, href, color }) => (
