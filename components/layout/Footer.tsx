@@ -59,12 +59,12 @@ export default function Footer() {
                   href="mailto:hello@touriva.com"
                   className="hover:text-white transition-colors"
                 >
-                  hello@touriva.com
+                  hello@domain.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin size={14} className="text-brand-400" />
-                <span>Ismailia, Egypt</span>
+                <span>City, Country</span>
               </div>
             </div>
           </div>
@@ -147,14 +147,15 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-3">Follow Us</h4>
               <div className="flex gap-3">
                 {[
-                  { icon: Instagram, href: "#" },
-                  { icon: Facebook, href: "#" },
-                  { icon: Twitter, href: "#" },
-                  { icon: Youtube, href: "#" },
+                  { icon: Instagram, href: "/" },
+                  { icon: Facebook, href: "/" },
+                  { icon: Twitter, href: "/" },
+                  { icon: Youtube, href: "/" },
                 ].map(({ icon: Icon, href }, i) => (
                   <a
                     key={i}
                     href={href}
+                    target="_blank"
                     className="w-9 h-9 rounded-lg bg-dark-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-brand-600 transition-colors"
                   >
                     <Icon size={16} />
@@ -167,8 +168,17 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-dark-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <p>
-            © {new Date().getFullYear()} Touriva. Travel Agency. All rights
-            reserved.
+            © {new Date().getFullYear()} [Project Name]. All rights reserved.
+            Developed by{" "}
+            <a
+              href="https://aaaportfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-400 hover:text-brand-300 transition-colors font-medium"
+            >
+              Launchy
+            </a>
+            .
           </p>
           <div className="flex gap-6">
             <Link

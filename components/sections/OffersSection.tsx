@@ -24,7 +24,7 @@ const offers = [
     title: "Luxor Private Tour — 15% OFF",
     desc: "Exclusive discount on our Luxor Pharaohs Private Tour. Your own Egyptologist, your schedule.",
     image:
-      "https://images.unsplash.com/photo-1562679299-8f7c4b76c434?w=600&q=80",
+      "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=600&q=80",
     badge: "15% OFF",
     link: "/trip/luxor-pharaohs-private-tour",
   },
