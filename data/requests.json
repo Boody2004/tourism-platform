@@ -1,5 +1,32 @@
 [
   {
+    "id": "req_1776262542995_u7m7r",
+    "tripTitle": "nenen",
+    "name": "test tailor made",
+    "phone": "+201021186334",
+    "email": "arenabeachhotelandspa@gmail.com",
+    "travelDate": "2026-04-24",
+    "country": "Djibouti",
+    "adults": 3,
+    "children": 4,
+    "status": "New",
+    "createdAt": "2026-04-15T14:15:42.995Z"
+  },
+  {
+    "id": "req_1776102030337_cz2cl",
+    "tripId": "9",
+    "tripTitle": "Cairo Culture & History Discovery",
+    "name": "ِArena Beach Hotel and spa",
+    "phone": "+201021186334",
+    "email": "arenabeachhotelandspa@gmail.com",
+    "travelDate": "2026-04-15",
+    "country": "Egypt",
+    "adults": 3,
+    "children": 0,
+    "status": "Closed",
+    "createdAt": "2026-04-13T17:40:30.338Z"
+  },
+  {
     "id": "req_1776083636928_02c8p",
     "tripId": "1",
     "tripTitle": "Hurghada Red Sea Diving",
@@ -24,7 +51,7 @@
     "country": "Egypt",
     "adults": 7,
     "children": 4,
-    "status": "New",
+    "status": "Closed",
     "createdAt": "2026-04-13T12:33:39.388Z"
   }
 ]

@@ -32,7 +32,7 @@ const navLinks = [
     ],
   },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Tailor Made", href: "/tailor-made" },
 ];
 
 export default function Navbar() {
@@ -128,7 +128,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <Link href="/contact" className="btn-primary text-sm py-2.5 px-5">
-              Book a Trip
+              Let's Talk
             </Link>
           </div>
 
@@ -178,7 +178,7 @@ export default function Navbar() {
                 href="/contact"
                 className="btn-primary w-full justify-center text-sm"
               >
-                Book a Trip
+                Let's Talk
               </Link>
             </div>
           </div>

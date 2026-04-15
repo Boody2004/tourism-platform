@@ -201,9 +201,7 @@ export default function TripDetailPage({ params }: Props) {
                     USD {trip.price.toLocaleString()}
                   </span>
                 </div>
-                <p className="text-slate-400 text-xs mb-6">
-                  per person · all inclusive
-                </p>
+                <p className="text-slate-400 text-xs mb-6">per adult</p>
                 <BookingForm tripId={trip.id} tripTitle={trip.title} />
               </div>
 

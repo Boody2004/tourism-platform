@@ -156,7 +156,6 @@ export default function TripsPageClient({
           </div>
         ) : (
           <div className="text-center py-20">
-            <p className="text-4xl mb-4">🗺️</p>
             <h3 className="font-display text-xl font-semibold text-dark-800 mb-2">
               No trips found
             </h3>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import agencyData from "@/data/agency.json";
 
 export default function ContactClient() {
   const [form, setForm] = useState({
@@ -58,7 +59,7 @@ export default function ContactClient() {
           <div className="space-y-6">
             <div>
               <h2 className="font-display text-2xl font-bold text-dark-800 mb-6">
-                We&apos;d love to hear from you
+                We&apos;ll plan it for you
               </h2>
             </div>
 
@@ -66,38 +67,33 @@ export default function ContactClient() {
               {
                 icon: Phone,
                 label: "Phone",
-                value: "+1 (234) 567-890",
-                href: "tel:+1234567890",
-                color: "bg-brand-50 text-brand-600",
+                value: agencyData.phone,
+                href: `tel:+${agencyData.phone.replace(/\D/g, "")}`,
               },
               {
                 icon: Mail,
                 label: "Email",
-                value: "hello@touriva.com",
-                href: "mailto:hello@touriva.com",
-                color: "bg-brand-50 text-brand-600",
+                value: agencyData.email,
+                href: `mailto:${agencyData.email}`,
               },
               {
                 icon: MapPin,
                 label: "Office",
-                value: "10 Orchard Road, Singapore 238859",
-                color: "bg-brand-50 text-brand-600",
+                value: "Ismailia, Egypt",
+                href: agencyData.locationLink,
               },
               {
                 icon: Clock,
                 label: "Hours",
-                value: "Mon–Sun: 8:00 AM – 8:00 PM SGT",
-                color: "bg-brand-50 text-brand-600",
+                value: "Mon–Sun: 8:00 AM – 8:00 PM",
               },
-            ].map(({ icon: Icon, label, value, href, color }) => (
+            ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
                 href={href}
                 className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-100 hover:shadow-md transition-all group"
               >
-                <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${color}`}
-                >
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-brand-50 text-brand-600">
                   <Icon size={18} />
                 </div>
                 <div>
@@ -111,7 +107,7 @@ export default function ContactClient() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/1234567890"
+              href={`https://wa.me/${agencyData.whatsappNumber.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-4 bg-green-50 rounded-2xl border border-green-100 hover:shadow-md transition-all group"
