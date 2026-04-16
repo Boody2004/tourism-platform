@@ -34,8 +34,16 @@ export interface BookingRequest {
   country: string;
   adults: number;
   children: number;
-  status: 'New' | 'Closed';
+  status: "New" | "Closed";
   createdAt: string;
+  // Tailor Made specific fields
+  isTailorMade?: boolean;
+  requestTitle?: string;
+  arrivalDate?: string;
+  departureDate?: string;
+  nationality?: string;
+  wishTo?: string;
+  note?: string;
 }
 
 export interface BlogPost {

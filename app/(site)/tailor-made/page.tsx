@@ -420,6 +420,7 @@ export default function TailorMadePage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
+          isTailorMade: true,
           tripTitle: form.requestTitle,
           travelDate: form.arrivalDate,
         }),
