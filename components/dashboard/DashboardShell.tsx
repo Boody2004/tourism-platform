@@ -204,10 +204,27 @@ export default function DashboardShell({
           </Link>
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-red-400 text-sm transition-colors w-full"
+            className="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-red-400 text-sm transition-colors w-full mb-2"
           >
             <LogOut size={15} /> Sign Out
           </button>
+          <div className="flex items-center">
+            <p className="text-xs text-slate-500">
+              Developed by{" "}
+              <a
+                href="https://aaaportfolio.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-400 hover:text-brand-300 transition-colors font-medium"
+              >
+                Launchy
+              </a>
+              .
+            </p>
+            <span className="ml-auto text-right text-xs text-slate-500 font-medium">
+              v 1.0.0
+            </span>
+          </div>
         </div>
       </aside>
 
