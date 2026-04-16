@@ -158,7 +158,6 @@ export default function RequestsClient({ initialRequests }: Props) {
       {/* Cards */}
       {filtered.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-2xl border border-slate-200">
-          <p className="text-4xl mb-3">📭</p>
           <p className="font-semibold text-dark-800">No requests found</p>
           <p className="text-slate-400 text-sm mt-1">
             Booking submissions will appear here.
@@ -286,7 +285,7 @@ function RegularCard(props: CardProps) {
           </div>
           {req.tripTitle && (
             <p className="text-xs text-brand-600 font-medium mt-0.5">
-              📍 {req.tripTitle}
+              {req.tripTitle}
             </p>
           )}
         </div>
