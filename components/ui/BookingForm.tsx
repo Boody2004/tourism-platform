@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send, Shield } from "lucide-react";
 import { Phone, Mail } from "lucide-react";
+import agencyData from "@/data/agency.json";
 
 interface BookingFormProps {
   tripId?: string;
@@ -225,21 +226,21 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
       {/* Contact info below form */}
       <div className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-3 gap-2 text-center text-xs text-slate-500">
         <a
-          href="tel:+1234567890"
+          href={`tel:+${agencyData.phone.replace(/\D/g, "")}`}
           className="flex items-center gap-2 hover:text-brand-600 transition-colors"
         >
           <Phone size={13} className=" hover:text-brand-700 shrink-0" />
           Call Us
         </a>
         <a
-          href="mailto:hello@touriva.com"
+          href={`mailto:${agencyData.email}`}
           className="flex items-center gap-2 hover:text-brand-600 transition-colors"
         >
           <Mail size={13} className="hover:text-brand-700 shrink-0" />
           Email
         </a>
         <a
-          href="https://wa.me/1234567890"
+          href={`https://wa.me/${agencyData.whatsappNumber.replace(/\D/g, "")}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-green-600 transition-colors"

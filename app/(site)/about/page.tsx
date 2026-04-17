@@ -7,7 +7,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Touriva — our story, our mission, and our team of travel experts.",
+    "Learn about Company — our story, our mission, and our team of travel experts.",
 };
 
 const values = [
@@ -67,7 +67,7 @@ export default function AboutPage() {
       <div className="relative h-[50vh] min-h-80 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&q=80"
-          alt="About Touriva"
+          alt="About Company"
           fill
           className="object-cover"
         />
@@ -92,7 +92,7 @@ export default function AboutPage() {
               <SectionHeader
                 label="Who We Are"
                 title="Crafting journeys that change you"
-                subtitle="Founded in 2009, Touriva began with a simple belief: the best travel experiences are deeply personal, meticulously planned, and genuinely transformative."
+                subtitle="Founded in 2009, Company began with a simple belief: the best travel experiences are deeply personal, meticulously planned, and genuinely transformative."
               />
               <p className="mt-4 text-slate-600 leading-relaxed">
                 From a small Singapore office with two passionate travel lovers,

@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { getAllDestinations, getAllTripTypes } from "@/lib/data";
+import agencyData from "@/data/agency.json";
 
 const destinations = getAllDestinations();
 const tripTypes = getAllTripTypes();
@@ -60,16 +62,31 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center">
-              <Globe size={20} className="text-white" />
-            </div>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Agency Logo"
+              width={35}
+              height={35}
+              priority
+            />
             <span
-              className={`font-display text-xl font-bold transition-colors ${scrolled || !isHome || menuOpen ? "text-dark-800" : "text-white"}`}
+              className={`font-display text-2xl font-bold transition-colors ${scrolled || !isHome || menuOpen ? "text-dark-800" : "text-white"}`}
             >
-              Touriva
+              {agencyData.name}
             </span>
           </Link>
+          {/* <Link href="/">
+            <Image
+              src={
+                scrolled || !isHome || menuOpen ? "/logo.png" : "/full-logo.png"
+              }
+              alt="Agency Logo"
+              width={scrolled || !isHome || menuOpen ? 50 : 220}
+              height={scrolled || !isHome || menuOpen ? 50 : 220}
+              priority
+            />
+          </Link> */}
 
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (

@@ -17,6 +17,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import agencyData from "@/data/agency.json";
 
 interface Props {
   params: { slug: string };
@@ -213,27 +214,27 @@ export default function TripDetailPage({ params }: Props) {
                 <p>Our travel experts are available 7 days a week</p>
                 <div className="flex flex-col gap-2 pt-1">
                   <a
-                    href="tel:+1234567890"
+                    href={`tel:+${agencyData.phone.replace(/\D/g, "")}`}
                     className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium"
                   >
                     <Phone
                       size={14}
                       className="text-brand-600 hover:text-brand-700 shrink-0"
                     />
-                    +1 (234) 567-890
+                    {agencyData.phone}
                   </a>
                   <a
-                    href="mailto:hello@touriva.com"
+                    href={`mailto:${agencyData.email}`}
                     className="flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium"
                   >
                     <Mail
                       size={14}
                       className="text-brand-600 hover:text-brand-700 shrink-0"
                     />
-                    hello@touriva.com
+                    {agencyData.email}
                   </a>
                   <a
-                    href="https://wa.me/1234567890"
+                    href={`https://wa.me/${agencyData.whatsappNumber.replace(/\D/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"

@@ -7,7 +7,7 @@ import { blogPosts } from "@/lib/blog-data";
 export const metadata: Metadata = {
   title: "Travel Blog",
   description:
-    "Travel tips, destination guides, and inspiring stories from the Touriva team.",
+    "Travel tips, destination guides, and inspiring stories from the company team.",
 };
 
 export default function BlogPage() {

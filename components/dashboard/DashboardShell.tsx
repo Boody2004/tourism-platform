@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
   Globe,
@@ -14,6 +15,7 @@ import {
   X,
   ChevronRight,
 } from "lucide-react";
+import agencyData from "@/data/agency.json";
 
 const navItems = [
   { label: "Overview", href: "/dashboard", icon: LayoutDashboard },
@@ -54,11 +56,18 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
     <div className="min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-brand-900 flex items-center justify-center p-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <Globe size={28} className="text-white" />
+          <div className="flex items-center justify-center mx-auto mb-4">
+            <Image
+              src="/full-logo.png"
+              alt="Agency Logo"
+              width={250}
+              height={250}
+              priority
+              className="object-contain"
+            />
           </div>
           <h1 className="font-display text-2xl font-bold text-white">
-            Touriva Admin
+            {agencyData.name} Admin
           </h1>
           <p className="text-slate-400 text-sm mt-1">
             Sign in to your dashboard
@@ -113,7 +122,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
             )}
           </button>
           <p className="text-center text-xs text-slate-400 mt-2">
-            Default: admin / touriva2024
+            Default: admin / admin
           </p>
         </form>
       </div>
@@ -160,12 +169,16 @@ export default function DashboardShell({
       >
         {/* Logo */}
         <div className="flex items-center gap-3 px-6 h-16 border-b border-dark-700">
-          <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-            <Globe size={16} className="text-white" />
-          </div>
-          <span className="font-display text-lg font-bold text-white">
-            Touriva
-          </span>
+          <Link href="/dashboard">
+            <Image
+              src="/full-logo.png"
+              alt="Agency Logo"
+              width={250}
+              height={250}
+              priority
+            />
+          </Link>
+
           <span className="ml-auto text-xs text-slate-500 font-medium">
             Admin
           </span>

@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import agencyData from "@/data/agency.json";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Touriva collects, uses, and protects your personal information.",
+    "How Company collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -31,7 +32,7 @@ export default function PrivacyPage() {
               1. Information We Collect
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              When you use Touriva's website or submit a booking request, we may
+              When you use Company's website or submit a booking request, we may
               collect the following personal information:
             </p>
             <ul className="space-y-2 text-slate-600">
@@ -98,7 +99,7 @@ export default function PrivacyPage() {
               submitted through our website is transmitted over secure HTTPS
               connections. We do not sell, trade, or rent your personal
               information to third parties. Access to your data is restricted to
-              authorized Touriva staff only.
+              authorized Company staff only.
             </p>
           </section>
 
@@ -155,10 +156,10 @@ export default function PrivacyPage() {
             <p className="text-slate-600 leading-relaxed mt-4">
               To exercise any of these rights, contact us at{" "}
               <a
-                href="mailto:hello@touriva.com"
+                href={`mailto:${agencyData.email}`}
                 className="text-brand-600 hover:underline"
               >
-                hello@touriva.com
+                {agencyData.email}
               </a>
               .
             </p>
@@ -183,10 +184,10 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy, please
               contact us at{" "}
               <a
-                href="mailto:hello@touriva.com"
+                href={`mailto:${agencyData.email}`}
                 className="text-brand-600 hover:underline"
               >
-                hello@touriva.com
+                {agencyData.email}
               </a>{" "}
               or visit our{" "}
               <Link href="/contact" className="text-brand-600 hover:underline">

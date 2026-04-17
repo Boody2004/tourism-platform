@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import agencyData from "@/data/agency.json";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms and conditions for using Touriva travel services.",
+  description: "Terms and conditions for using company travel services.",
 };
 
 export default function TermsPage() {
@@ -30,10 +31,10 @@ export default function TermsPage() {
               1. Acceptance of Terms
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              By accessing or using Touriva's website and services, you agree to
+              By accessing or using company's website and services, you agree to
               be bound by these Terms of Service. If you do not agree to these
               terms, please do not use our services. These terms apply to all
-              visitors, users, and customers of Touriva.
+              visitors, users, and customers of company.
             </p>
           </section>
 
@@ -42,7 +43,7 @@ export default function TermsPage() {
               2. Our Services
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              Touriva provides travel planning and tour package services across
+              company provides travel planning and tour package services across
               Egypt and the surrounding region. We act as a travel organizer,
               arranging accommodation, transportation, guides, and activities on
               behalf of our clients. All services are subject to availability
@@ -55,7 +56,7 @@ export default function TermsPage() {
               3. Booking & Payment
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              When making a booking with Touriva:
+              When making a booking with company:
             </p>
             <ul className="space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
@@ -73,7 +74,7 @@ export default function TermsPage() {
               <li className="flex items-start gap-2">
                 <span className="text-brand-500 mt-1">•</span> Bookings are only
                 confirmed upon receipt of deposit and written confirmation from
-                Touriva
+                company
               </li>
             </ul>
           </section>
@@ -112,7 +113,7 @@ export default function TermsPage() {
             <p className="text-slate-600 leading-relaxed">
               It is your responsibility to ensure you hold a valid passport, any
               required visas, and any necessary vaccinations or health
-              documentation for your destination. Touriva is not liable for any
+              documentation for your destination. company is not liable for any
               costs or losses arising from failure to meet entry requirements.
             </p>
           </section>
@@ -122,7 +123,7 @@ export default function TermsPage() {
               6. Limitation of Liability
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              Touriva acts as an organizer and is not liable for personal
+              company acts as an organizer and is not liable for personal
               injury, loss, damage, or additional expenses caused by events
               beyond our control, including but not limited to weather
               conditions, political unrest, natural disasters, or actions of
@@ -136,7 +137,7 @@ export default function TermsPage() {
               7. Changes to Itinerary
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              Touriva reserves the right to modify itineraries, accommodation,
+              company reserves the right to modify itineraries, accommodation,
               or transportation arrangements due to unforeseen circumstances. We
               will notify you of any significant changes as soon as possible and
               offer suitable alternatives where available.
@@ -149,7 +150,7 @@ export default function TermsPage() {
             </h2>
             <p className="text-slate-600 leading-relaxed">
               All travelers are expected to behave respectfully toward local
-              cultures, fellow travelers, and Touriva staff. We reserve the
+              cultures, fellow travelers, and company staff. We reserve the
               right to remove any traveler from a tour without refund if their
               behavior is deemed disruptive, dangerous, or disrespectful.
             </p>
@@ -161,7 +162,7 @@ export default function TermsPage() {
             </h2>
             <p className="text-slate-600 leading-relaxed">
               All content on this website including text, images, logos, and
-              itineraries is the property of Touriva and may not be reproduced,
+              itineraries is the property of company and may not be reproduced,
               distributed, or used without written permission.
             </p>
           </section>
@@ -185,10 +186,10 @@ export default function TermsPage() {
               If you have any questions about these Terms of Service, please
               contact us at{" "}
               <a
-                href="mailto:hello@touriva.com"
+                href={`mailto:${agencyData.email}`}
                 className="text-brand-600 hover:underline"
               >
-                hello@touriva.com
+                {agencyData.email}
               </a>{" "}
               or visit our{" "}
               <Link href="/contact" className="text-brand-600 hover:underline">
