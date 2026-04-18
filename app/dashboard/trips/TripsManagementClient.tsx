@@ -37,7 +37,10 @@ function ArrayField({
   onChange: (vals: string[]) => void;
   placeholder?: string;
 }) {
-  const add = () => onChange([...values, ""]);
+  const add = () => {
+    if (values.length >= 10) return;
+    onChange([...values, ""]);
+  };
   const remove = (i: number) => onChange(values.filter((_, idx) => idx !== i));
   const update = (i: number, val: string) =>
     onChange(values.map((v, idx) => (idx === i ? val : v)));
@@ -45,11 +48,17 @@ function ArrayField({
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
-        <label className="text-sm font-medium text-slate-700">{label}</label>
+        <label className="text-sm font-medium text-slate-700">
+          {label}
+          <span className="ml-2 text-xs text-slate-400 font-normal">
+            ({values.length}/10)
+          </span>
+        </label>
         <button
           type="button"
           onClick={add}
-          className="text-xs text-brand-600 hover:text-brand-700 font-medium flex items-center gap-1"
+          disabled={values.length >= 10}
+          className="text-xs text-brand-600 hover:text-brand-700 font-medium flex items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Plus size={12} /> Add item
         </button>
@@ -91,7 +100,10 @@ function FAQField({
   faqs: { question: string; answer: string }[];
   onChange: (f: typeof faqs) => void;
 }) {
-  const add = () => onChange([...faqs, { question: "", answer: "" }]);
+  const add = () => {
+    if (faqs.length >= 10) return;
+    onChange([...faqs, { question: "", answer: "" }]);
+  };
   const remove = (i: number) => onChange(faqs.filter((_, idx) => idx !== i));
   const update = (i: number, key: "question" | "answer", val: string) =>
     onChange(faqs.map((f, idx) => (idx === i ? { ...f, [key]: val } : f)));
@@ -99,11 +111,17 @@ function FAQField({
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
-        <label className="text-sm font-medium text-slate-700">FAQs</label>
+        <label className="text-sm font-medium text-slate-700">
+          FAQs
+          <span className="ml-2 text-xs text-slate-400 font-normal">
+            ({faqs.length}/10)
+          </span>
+        </label>
         <button
           type="button"
           onClick={add}
-          className="text-xs text-brand-600 hover:text-brand-700 font-medium flex items-center gap-1"
+          disabled={faqs.length >= 10}
+          className="text-xs text-brand-600 hover:text-brand-700 font-medium flex items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Plus size={12} /> Add FAQ
         </button>
@@ -526,7 +544,7 @@ export default function TripsManagementClient({ initialTrips }: Props) {
             placeholder="Search trips..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white"
+            className="w-full pl-10 pr-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white"
           />
         </div>
 
