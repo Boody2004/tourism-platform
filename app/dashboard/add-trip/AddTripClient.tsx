@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Plus, Minus, Upload, Check } from "lucide-react";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { getAllTripTypes, getAllDestinations } from "@/lib/data";
 
 interface ArrayFieldProps {
@@ -38,7 +39,7 @@ function ArrayField({ label, values, onChange, placeholder }: ArrayFieldProps) {
               value={v}
               onChange={(e) => update(i, e.target.value)}
               placeholder={placeholder}
-              className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
+              className="flex-1 px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
             />
             <button
               type="button"
@@ -103,14 +104,14 @@ function FAQField({
               value={faq.question}
               onChange={(e) => update(i, "question", e.target.value)}
               placeholder="Question..."
-              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
+              className="w-full px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
             />
             <textarea
               value={faq.answer}
               onChange={(e) => update(i, "answer", e.target.value)}
               placeholder="Answer..."
               rows={2}
-              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
+              className="w-full px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
             />
           </div>
         ))}
@@ -125,7 +126,7 @@ function FAQField({
 }
 
 const inputClass =
-  "w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all bg-white";
+  "w-full px-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent bg-white";
 
 export default function AddTripClient() {
   const router = useRouter();
@@ -193,7 +194,7 @@ export default function AddTripClient() {
         </h2>
         <p className="text-slate-500 text-sm">Redirecting to trips list...</p>
         <p className="text-xs text-slate-400 mt-2">
-          ✨ If this introduced a new type or destination, its route is
+          If this introduced a new type or destination, its route is
           automatically live.
         </p>
       </div>
@@ -257,38 +258,30 @@ export default function AddTripClient() {
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
               Trip Type *
             </label>
-            <select
-              required
+            <CustomSelect
+              options={getAllTripTypes().map((t) => ({
+                value: t.name,
+                label: t.name,
+              }))}
               value={form.type}
-              onChange={(e) => set("type", e.target.value)}
-              className={inputClass}
-            >
-              <option value="">Select a trip type</option>
-              {getAllTripTypes().map((t) => (
-                <option key={t.slug} value={t.name}>
-                  {t.name}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => set("type", val)}
+              placeholder="Select a trip type"
+            />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
               Destination *
             </label>
-            <select
-              required
+            <CustomSelect
+              options={getAllDestinations().map((d) => ({
+                value: d.name,
+                label: d.name,
+              }))}
               value={form.destination}
-              onChange={(e) => set("destination", e.target.value)}
-              className={inputClass}
-            >
-              <option value="">Select a destination</option>
-              {getAllDestinations().map((d) => (
-                <option key={d.slug} value={d.name}>
-                  {d.name}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => set("destination", val)}
+              placeholder="Select a destination"
+            />
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -362,7 +355,7 @@ export default function AddTripClient() {
       </div>
 
       {/* Highlights, Included, Excluded */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 space-y-6">
+      <div className="bg-white rounded-2xl border border-slate-200  p-6 space-y-6">
         <h2 className="font-semibold text-dark-800">Trip Details</h2>
         <ArrayField
           label="Highlights"

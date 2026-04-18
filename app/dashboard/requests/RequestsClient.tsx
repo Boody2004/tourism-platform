@@ -118,7 +118,7 @@ export default function RequestsClient({ initialRequests }: Props) {
             placeholder="Search by name, phone, trip..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white"
+            className="w-full pl-10 pr-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white"
           />
         </div>
         {/* Status filter */}

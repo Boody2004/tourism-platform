@@ -16,13 +16,14 @@ import {
   Minus,
 } from "lucide-react";
 import { getAllTripTypes, getAllDestinations } from "@/lib/data";
+import CustomSelect from "@/components/ui/CustomSelect";
 
 interface Props {
   initialTrips: Trip[];
 }
 
 const inputClass =
-  "w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all bg-white";
+  "w-full px-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent bg-white";
 
 // ── Reusable array field ──────────────────────────────────────────────────────
 function ArrayField({
@@ -61,7 +62,7 @@ function ArrayField({
               value={v}
               onChange={(e) => update(i, e.target.value)}
               placeholder={placeholder}
-              className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
+              className="flex-1 px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
             />
             <button
               type="button"
@@ -127,14 +128,14 @@ function FAQField({
               value={faq.question}
               onChange={(e) => update(i, "question", e.target.value)}
               placeholder="Question..."
-              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
+              className="w-full px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400"
             />
             <textarea
               value={faq.answer}
               onChange={(e) => update(i, "answer", e.target.value)}
               placeholder="Answer..."
               rows={2}
-              className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
+              className="w-full px-3 py-2 border border-slate-200 hover:border-brand-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 resize-none"
             />
           </div>
         ))}
@@ -296,39 +297,31 @@ function EditModal({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                Destination *
+                Trip Type *
               </label>
-              <select
-                required
-                value={form.destination}
-                onChange={(e) => set("destination", e.target.value)}
-                className={inputClass}
-              >
-                <option value="">Select destination</option>
-                {getAllDestinations().map((d) => (
-                  <option key={d.slug} value={d.name}>
-                    {d.name}
-                  </option>
-                ))}
-              </select>
+              <CustomSelect
+                options={getAllTripTypes().map((t) => ({
+                  value: t.name,
+                  label: t.name,
+                }))}
+                value={form.type}
+                onChange={(val) => set("type", val)}
+                placeholder="Select type"
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                Trip Type *
+                Destination *
               </label>
-              <select
-                required
-                value={form.type}
-                onChange={(e) => set("type", e.target.value)}
-                className={inputClass}
-              >
-                <option value="">Select type</option>
-                {getAllTripTypes().map((t) => (
-                  <option key={t.slug} value={t.name}>
-                    {t.name}
-                  </option>
-                ))}
-              </select>
+              <CustomSelect
+                options={getAllDestinations().map((d) => ({
+                  value: d.name,
+                  label: d.name,
+                }))}
+                value={form.destination}
+                onChange={(val) => set("destination", val)}
+                placeholder="Select destination"
+              />
             </div>
           </div>
 

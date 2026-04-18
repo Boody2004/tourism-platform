@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import CustomSelect from "@/components/ui/CustomSelect";
 
 // Full nationalities list
-const NATIONALITIES = [
+const nationalities = [
   "Afghan",
   "Albanian",
   "Algerian",
@@ -194,7 +195,7 @@ const NATIONALITIES = [
 ];
 
 // Full countries list
-const COUNTRIES = [
+const countries = [
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -382,7 +383,7 @@ const COUNTRIES = [
 ];
 
 const inputClass =
-  "w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all bg-white";
+  "w-full px-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent bg-white";
 
 export default function TailorMadePage() {
   const [form, setForm] = useState({
@@ -593,41 +594,33 @@ export default function TailorMadePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                    Nationality *
+                    Nationality
                   </label>
-                  <select
-                    name="nationality"
-                    required
+                  <CustomSelect
+                    options={nationalities.map((n) => ({ value: n, label: n }))}
                     value={form.nationality}
-                    onChange={handleChange}
-                    className={inputClass}
-                  >
-                    <option value="">Select nationality</option>
-                    {NATIONALITIES.map((n) => (
-                      <option key={n} value={n}>
-                        {n}
-                      </option>
-                    ))}
-                  </select>
+                    onChange={(val) =>
+                      handleChange({
+                        target: { name: "nationality", value: val },
+                      } as any)
+                    }
+                    placeholder="Select nationality"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                    Select Country *
+                    Select Country
                   </label>
-                  <select
-                    name="country"
-                    required
+                  <CustomSelect
+                    options={countries.map((c) => ({ value: c, label: c }))}
                     value={form.country}
-                    onChange={handleChange}
-                    className={inputClass}
-                  >
-                    <option value="">Select country</option>
-                    {COUNTRIES.map((c) => (
-                      <option key={c} value={c}>
-                        {c}
-                      </option>
-                    ))}
-                  </select>
+                    onChange={(val) =>
+                      handleChange({
+                        target: { name: "country", value: val },
+                      } as any)
+                    }
+                    placeholder="Select country"
+                  />
                 </div>
               </div>
 

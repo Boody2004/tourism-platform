@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import TripCard from "@/components/ui/TripCard";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Trip } from "@/lib/types";
 
 interface TripsPageClientProps {
@@ -19,7 +20,13 @@ export default function TripsPageClient({
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("");
   const [selectedDest, setSelectedDest] = useState("");
-  const [sortBy, setSortBy] = useState("featured");
+  const [sortBy, setSortBy] = useState("");
+
+  const sortOptions = [
+    { label: "Price: Low–High", value: "price-asc" },
+    { label: "Price: High–Low", value: "price-desc" },
+    { label: "Top Rated", value: "rating" },
+  ];
 
   const filtered = useMemo(() => {
     let result = [...trips];
@@ -46,10 +53,9 @@ export default function TripsPageClient({
     setSearch("");
     setSelectedType("");
     setSelectedDest("");
-    setSortBy("featured");
+    setSortBy("");
   };
-  const hasFilters =
-    search || selectedType || selectedDest || sortBy !== "featured";
+  const hasFilters = search || selectedType || selectedDest || sortBy;
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -77,46 +83,33 @@ export default function TripsPageClient({
             />
             <input
               type="text"
-              placeholder="Search trips, destinations..."
+              placeholder="Search trip types, destinations..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
+              className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 hover:border-brand-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
             />
           </div>
-          <select
+          <CustomSelect
+            options={typeNames.map((t) => ({ value: t, label: t }))}
             value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white text-slate-600 md:w-48"
-          >
-            <option value="">All Trip Types</option>
-            {typeNames.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-          <select
+            onChange={setSelectedType}
+            placeholder="All Trip Types"
+            className="md:w-48"
+          />
+          <CustomSelect
+            options={destinationNames.map((d) => ({ value: d, label: d }))}
             value={selectedDest}
-            onChange={(e) => setSelectedDest(e.target.value)}
-            className="px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white text-slate-600 md:w-48"
-          >
-            <option value="">All Destinations</option>
-            {destinationNames.map((d) => (
-              <option key={d} value={d}>
-                {d}
-              </option>
-            ))}
-          </select>
-          <select
+            onChange={setSelectedDest}
+            placeholder="All Destinations"
+            className="md:w-48"
+          />
+          <CustomSelect
+            options={sortOptions}
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-400 bg-white text-slate-600 md:w-40"
-          >
-            <option value="featured">Featured</option>
-            <option value="price-asc">Price: Low–High</option>
-            <option value="price-desc">Price: High–Low</option>
-            <option value="rating">Top Rated</option>
-          </select>
+            onChange={setSortBy}
+            placeholder="Featured"
+            className="md:w-48"
+          />
           {hasFilters && (
             <button
               onClick={clearFilters}

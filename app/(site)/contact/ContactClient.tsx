@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import CustomSelect from "@/components/ui/CustomSelect";
 import agencyData from "@/data/agency.json";
 
 export default function ContactClient() {
@@ -15,6 +16,14 @@ export default function ContactClient() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+
+  const subjectOptions = [
+    { label: "Trip Enquiry", value: "Trip Enquiry" },
+    { label: "Booking Help", value: "Booking Help" },
+    { label: "Custom Tour Request", value: "Custom Tour Request" },
+    { label: "Cancellation / Changes", value: "Cancellation / Changes" },
+    { label: "General Question", value: "General Question" },
+  ];
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -42,7 +51,7 @@ export default function ContactClient() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all";
+    "w-full px-4 py-2.5 border border-slate-200 hover:border-brand-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent";
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -210,22 +219,18 @@ export default function ContactClient() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                      Subject *
+                      Subject
                     </label>
-                    <select
-                      name="subject"
-                      required
+                    <CustomSelect
+                      options={subjectOptions}
                       value={form.subject}
-                      onChange={handleChange}
-                      className={inputClass}
-                    >
-                      <option value="">Select a topic</option>
-                      <option>Trip Enquiry</option>
-                      <option>Booking Help</option>
-                      <option>Custom Tour Request</option>
-                      <option>Cancellation / Changes</option>
-                      <option>General Question</option>
-                    </select>
+                      onChange={(val) =>
+                        handleChange({
+                          target: { name: "subject", value: val },
+                        } as any)
+                      }
+                      placeholder="Select a topic"
+                    />
                   </div>
                 </div>
                 <div>
