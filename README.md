@@ -30,13 +30,15 @@ npm run dev
 ## 3. Configure Client Data
 
 - Update agency file
-- File Location: `data/agency.json`
+- File location: `data/agency.json`
+- Change site logo
+- Change meta des content
 
 ## 4. Configure Static Data
 
 - Check destinations file
 - File Location: `data/destinations.json`
-- Chek trip types file
+- Check trip types file
 - File Location: `data/trip-types.json`
 
 ## 5. Connect Supabase
