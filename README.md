@@ -4,6 +4,53 @@ A tourism web system project developed as part of my personal portfolio, showcas
 
 ### go to [website]()
 
+---
+
+## System Overview
+
+The system is divided into two main parts:
+
+### 🔹 Client Side (User Interface)
+
+A complete front-facing website designed for travel agencies, including:
+
+- Home Page
+- About Us
+- Trips
+  - All Trips
+  - Trip Types
+- Destinations
+- Blog
+- Tailor Made Requests
+- Contact Us
+
+**Features:**
+
+- Browse trips and destinations
+- Send booking requests
+- Contact the agency directly
+- Responsive and user-friendly design
+
+---
+
+### 🔹 Admin Side (Dashboard)
+
+A simple admin panel to manage core system data:
+
+- Dashboard Overview
+- Trips Management
+- Add / Edit Trips
+- Booking Requests (from users)
+
+**Features:**
+
+- View incoming booking requests
+- Manage trips data
+- Secure login using environment variables
+- Connected with Supabase for real-time data
+
+---
+
 **HAVE FUN 👌**
 **Thanks, Abdelrahman Atef**
 
@@ -30,15 +77,13 @@ npm run dev
 ## 3. Configure Client Data
 
 - Update agency file
-- File location: `data/agency.json`
-- Change site logo
-- Change meta des content
+- File Location: `data/agency.json`
 
 ## 4. Configure Static Data
 
 - Check destinations file
 - File Location: `data/destinations.json`
-- Check trip types file
+- Chek trip types file
 - File Location: `data/trip-types.json`
 
 ## 5. Connect Supabase

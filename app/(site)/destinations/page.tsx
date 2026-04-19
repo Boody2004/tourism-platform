@@ -35,7 +35,7 @@ export default function DestinationsPage() {
             const destTrips = trips.filter(
               (t) => t.destination.toLowerCase() === dest.name.toLowerCase(),
             );
-            const types = [...new Set(destTrips.map((t) => t.type))];
+            const types = Array.from(new Set(destTrips.map((t) => t.type)));
             const minPrice =
               destTrips.length > 0
                 ? Math.min(...destTrips.map((t) => t.price))
