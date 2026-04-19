@@ -160,6 +160,8 @@ export default function AddTripClient() {
     price: "",
     details: "",
     featured: false,
+    rating: "",
+    reviews: "",
     images: [""],
     highlights: [""],
     included: [""],
@@ -177,6 +179,8 @@ export default function AddTripClient() {
       const payload = {
         ...form,
         price: Number(form.price),
+        rating: Number(form.rating) || 4.2,
+        reviews: Number(form.reviews) || 45,
         images: form.images.filter(Boolean),
         highlights: form.highlights.filter(Boolean),
         included: form.included.filter(Boolean),
@@ -323,7 +327,7 @@ export default function AddTripClient() {
               type="text"
               value={form.duration}
               onChange={(e) => set("duration", e.target.value)}
-              placeholder="e.g. 7 Days / 6 Nights"
+              placeholder="e.g. 5 Days / 4 Nights"
               className={inputClass}
             />
           </div>
@@ -337,7 +341,43 @@ export default function AddTripClient() {
               min={0}
               value={form.price}
               onChange={(e) => set("price", e.target.value)}
-              placeholder="e.g. 1299"
+              className={inputClass}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Rating
+              <span className="ml-1 text-xs text-slate-400 font-normal">
+                (0 – 5)
+              </span>
+            </label>
+            <input
+              type="number"
+              min={0}
+              max={5}
+              step={0.1}
+              value={form.rating}
+              onChange={(e) => set("rating", e.target.value)}
+              placeholder="e.g. 4.8"
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Reviews
+              <span className="ml-1 text-xs text-slate-400 font-normal">
+                (total count)
+              </span>
+            </label>
+            <input
+              type="number"
+              min={0}
+              value={form.reviews}
+              onChange={(e) => set("reviews", e.target.value)}
+              placeholder="e.g. 128"
               className={inputClass}
             />
           </div>

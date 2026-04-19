@@ -186,6 +186,8 @@ function EditModal({
     price: String(trip.price),
     details: trip.details,
     featured: trip.featured,
+    rating: String(trip.rating ?? ""),
+    reviews: String(trip.reviews ?? ""),
     images: trip.images.length > 0 ? trip.images : [""],
     highlights: trip.highlights,
     included: trip.included,
@@ -207,6 +209,8 @@ function EditModal({
         ...trip,
         ...form,
         price: Number(form.price),
+        rating: Number(form.rating) || 4.2,
+        reviews: Number(form.reviews) || 45,
         images: form.images.filter(Boolean),
         highlights: form.highlights.filter(Boolean),
         included: form.included.filter(Boolean),
@@ -378,6 +382,43 @@ function EditModal({
                 min={0}
                 value={form.price}
                 onChange={(e) => set("price", e.target.value)}
+                className={inputClass}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                Rating
+                <span className="ml-1 text-xs text-slate-400 font-normal">
+                  (0 – 5)
+                </span>
+              </label>
+              <input
+                type="number"
+                min={0}
+                max={5}
+                step={0.1}
+                value={form.rating}
+                onChange={(e) => set("rating", e.target.value)}
+                placeholder="e.g. 4.8"
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                Reviews
+                <span className="ml-1 text-xs text-slate-400 font-normal">
+                  (total count)
+                </span>
+              </label>
+              <input
+                type="number"
+                min={0}
+                value={form.reviews}
+                onChange={(e) => set("reviews", e.target.value)}
+                placeholder="e.g. 128"
                 className={inputClass}
               />
             </div>
