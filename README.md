@@ -50,13 +50,13 @@ npm run dev
 ## 6. Setup Forms
 
 - Connect:
-  - Contact form → Resend (mail)
-  - Booking requests → Supabase (dashboard)
+  - Contact form → [Resend](https://resend.com) (mail)
+  - Booking requests → [Supabase](https://supabase.com) (dashboard)
 
 ## 7. Setup reCAPTCHA
 
-- Create new reCAPTCHA keys using client Gmail
-- Add to project
+- Create new reCAPTCHA keys
+- Add to project (.env.local)
 
 ## 8. Test System
 
