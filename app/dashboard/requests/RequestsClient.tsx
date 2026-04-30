@@ -320,6 +320,14 @@ function RegularCard(props: CardProps) {
         </div>
       </div>
 
+      {req.totalPrice && req.totalPrice > 0 && (
+        <div className="flex items-center gap-1.5 text-slate-600 col-span-2">
+          <span className="font-semibold text-brand-600">
+            Total: USD {req.totalPrice.toLocaleString()}
+          </span>
+        </div>
+      )}
+
       <CardActions {...props} />
     </div>
   );

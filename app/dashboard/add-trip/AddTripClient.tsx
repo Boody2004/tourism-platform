@@ -157,7 +157,8 @@ export default function AddTripClient() {
     type: "",
     groupSize: "",
     duration: "",
-    price: "",
+    adultPrice: "",
+    childPrice: "",
     details: "",
     featured: false,
     rating: "",
@@ -178,7 +179,9 @@ export default function AddTripClient() {
     try {
       const payload = {
         ...form,
-        price: Number(form.price),
+        adultPrice: Number(form.adultPrice) || 0,
+        childPrice: Number(form.childPrice) || 0,
+        price: Number(form.adultPrice) || 0, // keep price in sync
         rating: Number(form.rating) || 4.2,
         reviews: Number(form.reviews) || 45,
         images: form.images.filter(Boolean),
@@ -306,7 +309,7 @@ export default function AddTripClient() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
               Group Size
@@ -331,21 +334,36 @@ export default function AddTripClient() {
               className={inputClass}
             />
           </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Price (USD) *
+              Adult Price (USD) *
             </label>
             <input
               type="number"
               required
               min={0}
-              value={form.price}
-              onChange={(e) => set("price", e.target.value)}
+              value={form.adultPrice}
+              onChange={(e) => set("adultPrice", e.target.value)}
+              placeholder="e.g. 499"
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Child Price (USD)
+            </label>
+            <input
+              type="number"
+              min={0}
+              value={form.childPrice}
+              onChange={(e) => set("childPrice", e.target.value)}
+              placeholder="e.g. 299"
               className={inputClass}
             />
           </div>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">

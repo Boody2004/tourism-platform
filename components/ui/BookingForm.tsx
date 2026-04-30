@@ -1,34 +1,41 @@
 "use client";
 
 import { useState } from "react";
-import { Send, Shield } from "lucide-react";
-import { Phone, Mail } from "lucide-react";
+import { Send, Shield, Phone, Mail } from "lucide-react";
 import agencyData from "@/data/agency.json";
 
 interface BookingFormProps {
   tripId?: string;
   tripTitle?: string;
+  adultPrice?: number;
+  childPrice?: number;
 }
 
-export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
+export default function BookingForm({
+  tripId,
+  tripTitle,
+  adultPrice = 0,
+  childPrice = 0,
+}: BookingFormProps) {
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
   const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
     travelDate: "",
     country: "",
-    adults: 1,
-    children: 0,
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-  ) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+  const totalAdult = adults * adultPrice;
+  const totalChild = children * childPrice;
+  const total = totalAdult + totalChild;
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,19 +45,20 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
       const res = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, tripId, tripTitle }),
+        body: JSON.stringify({
+          ...form,
+          tripId,
+          tripTitle,
+          adults,
+          children,
+          totalPrice: total,
+        }),
       });
       if (!res.ok) throw new Error();
       setStatus("success");
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        travelDate: "",
-        country: "",
-        adults: 1,
-        children: 0,
-      });
+      setForm({ name: "", phone: "", email: "", travelDate: "", country: "" });
+      setAdults(1);
+      setChildren(0);
     } catch {
       setStatus("error");
     }
@@ -78,14 +86,110 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
     );
   }
 
+  const inputClass =
+    "w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all";
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Price per person */}
+      {adultPrice > 0 && (
+        <div className="space-y-1 pb-4 border-b border-slate-100">
+          <div className="flex items-baseline gap-2">
+            <span className="text-slate-400 text-sm">From</span>
+            <span className="font-display text-3xl font-bold text-brand-600">
+              USD {adultPrice.toLocaleString()}
+            </span>
+          </div>
+          <p className="text-slate-400 text-xs">per adult</p>
+        </div>
+      )}
+
       {tripTitle && (
         <div className="bg-brand-50 border border-brand-100 rounded-xl p-3 text-sm text-brand-700 font-medium">
           Booking for: {tripTitle}
         </div>
       )}
 
+      {/* Calculator */}
+      {adultPrice > 0 && (
+        <div className="space-y-3">
+          {/* Adults counter */}
+          <div className="flex items-center justify-between bg-slate-50 rounded-xl px-4 py-2.5">
+            <div>
+              <p className="text-sm font-medium text-dark-800">Adults</p>
+              <p className="text-xs text-slate-400">
+                USD {adultPrice.toLocaleString()}
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setAdults((a) => Math.max(1, a - 1))}
+                className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 transition-colors text-lg leading-none"
+              >
+                −
+              </button>
+              <span className="w-6 text-center font-bold text-dark-800 text-sm">
+                {adults}
+              </span>
+              <button
+                type="button"
+                onClick={() => setAdults((a) => Math.min(30, a + 1))}
+                className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 transition-colors text-lg leading-none"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          {/* Children counter */}
+          {childPrice > 0 && (
+            <div className="flex items-center justify-between bg-slate-50 rounded-xl px-4 py-2.5">
+              <div>
+                <p className="text-sm font-medium text-dark-800">Children</p>
+                <p className="text-xs text-slate-400">
+                  USD {childPrice.toLocaleString()}
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setChildren((c) => Math.max(0, c - 1))}
+                  className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 transition-colors text-lg leading-none"
+                >
+                  −
+                </button>
+                <span className="w-6 text-center font-bold text-dark-800 text-sm">
+                  {children}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setChildren((c) => Math.min(20, c + 1))}
+                  className="w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:border-brand-400 hover:text-brand-600 transition-colors text-lg leading-none"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Total */}
+          <div className="flex items-center justify-between bg-brand-50 rounded-xl px-4 py-3 border border-brand-100">
+            <p className="text-sm font-semibold text-brand-700">
+              Total ({adults} adult{adults !== 1 ? "s" : ""}
+              {children > 0
+                ? `, ${children} child${children !== 1 ? "ren" : ""}`
+                : ""}
+              )
+            </p>
+            <p className="font-display text-xl font-bold text-brand-600">
+              USD {total.toLocaleString()}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Form fields */}
       <div className="grid grid-cols-1 gap-4">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1">
@@ -98,7 +202,7 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
             value={form.name}
             onChange={handleChange}
             placeholder="John Smith"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
         <div>
@@ -112,7 +216,7 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
             value={form.phone}
             onChange={handleChange}
             placeholder="+1 234 567 890"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
         <div>
@@ -125,7 +229,7 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
             value={form.email}
             onChange={handleChange}
             placeholder="john@example.com"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
         <div>
@@ -139,7 +243,7 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
             value={form.travelDate}
             onChange={handleChange}
             min={new Date().toISOString().split("T")[0]}
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
         <div>
@@ -153,52 +257,10 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
             value={form.country}
             onChange={handleChange}
             placeholder="e.g. United States"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+            className={inputClass}
           />
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Adults *
-            </label>
-            <input
-              type="number"
-              name="adults"
-              required
-              min={1}
-              max={30}
-              value={form.adults}
-              onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Children
-            </label>
-            <input
-              type="number"
-              name="children"
-              min={0}
-              max={20}
-              value={form.children}
-              onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
-            />
-          </div>
-        </div>
       </div>
-
-      {/* reCAPTCHA placeholder */}
-      <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center gap-3">
-        <div className="w-5 h-5 border-2 border-slate-300 rounded" />
-        <span className="text-sm text-slate-500">I&apos;m not a robot</span>
-        <div className="ml-auto">
-          <Shield size={24} className="text-slate-300" />
-          <p className="text-[10px] text-slate-400">reCAPTCHA v3</p>
-        </div>
-      </div>
-      {/* TODO: Connect real Google reCAPTCHA v3 — replace placeholder above */}
 
       <button
         type="submit"
@@ -207,7 +269,7 @@ export default function BookingForm({ tripId, tripTitle }: BookingFormProps) {
       >
         {status === "loading" ? (
           <span className="flex items-center gap-2">
-            <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />{" "}
+            <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             Sending...
           </span>
         ) : (

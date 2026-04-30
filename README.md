@@ -100,29 +100,24 @@ npm run dev
   - Contact form → [Resend](https://resend.com) (mail)
   - Booking requests → [Supabase](https://supabase.com) (dashboard)
 
-## 7. Setup reCAPTCHA
-
-- Create new reCAPTCHA keys
-- Add to project (.env.local)
-
-## 8. Test System
+## 7. Test System
 
 - Contact form (mail)
 - Booking request (dashboard)
 - Admin login (dashboard)
 - Trips display (clint side)
 
-## 9. Push to GitHub
+## 8. Push to GitHub
 
 - Create new repo under Launchy
 - Push code
 
-## 10. Deploy
+## 9. Deploy
 
 - Deploy on Vercel
 - Connect domain
 
-## 11. Final Check
+## 10. Final Check
 
 - SEO basics
 - Mobile responsiveness

@@ -32,6 +32,7 @@ export async function POST(req: NextRequest) {
       children,
       tripId,
       tripTitle,
+      totalPrice,
       status,
       // tailor made fields
       isTailorMade,
@@ -64,6 +65,7 @@ export async function POST(req: NextRequest) {
       // regular booking fields
       tripId: tripId || undefined,
       tripTitle: tripTitle || undefined,
+      totalPrice: Number(totalPrice) || 0,
       // tailor made fields — only saved if present
       ...(isTailorMade && {
         isTailorMade: true,

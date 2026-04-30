@@ -7,6 +7,8 @@ export interface Trip {
   groupSize: string;
   duration: string;
   price: number;
+  adultPrice: number;
+  childPrice: number;
   rating: number;
   reviews: number;
   featured: boolean;
@@ -34,6 +36,7 @@ export interface BookingRequest {
   country: string;
   adults: number;
   children: number;
+  totalPrice?: number;
   status: "New" | "Closed";
   createdAt: string;
   // Tailor Made specific fields

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTripBySlug, getAllTrips } from "@/lib/data";
@@ -5,7 +6,6 @@ import ImageSlider from "@/components/ui/ImageSlider";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import BookingForm from "@/components/ui/BookingForm";
 import TripCard from "@/components/ui/TripCard";
-import Link from "next/link";
 import {
   MapPin,
   Users,
@@ -196,14 +196,12 @@ export default function TripDetailPage({ params }: Props) {
             <div className="sticky top-24 space-y-4">
               {/* Price card */}
               <div className="bg-white rounded-2xl border-2 border-brand-100 shadow-lg p-6">
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-slate-400 text-sm">From</span>
-                  <span className="font-display text-3xl font-bold text-brand-600">
-                    USD {trip.price.toLocaleString()}
-                  </span>
-                </div>
-                <p className="text-slate-400 text-xs mb-6">per adult</p>
-                <BookingForm tripId={trip.id} tripTitle={trip.title} />
+                <BookingForm
+                  tripId={trip.id}
+                  tripTitle={trip.title}
+                  adultPrice={trip.adultPrice ?? trip.price}
+                  childPrice={trip.childPrice ?? 0}
+                />
               </div>
 
               {/* Contact card */}
